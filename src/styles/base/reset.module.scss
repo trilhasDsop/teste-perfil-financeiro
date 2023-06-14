@@ -46,6 +46,30 @@ html{
 body{
    background-color: #141414;
    font-family: 'Gilroy-regular', sans-serif;
+   overflow-x: hidden;
+   position: relative;
+   &::before{
+      content: '';
+      position: absolute;
+      width: 386px;
+      height: 386px;
+      left: -90px;
+      top: -173px;
+      background-color: #12FF00;
+      opacity: 0.19;
+      filter: blur(125px);
+   }
+   &::after{
+      content: '';
+      position: absolute;
+      width: 386px;
+      height: 386px;
+      right: -90px;
+      top: -173px;
+      background-color: #12FF00;
+      opacity: 0.19;
+      filter: blur(125px);
+   }
 }
  
 ul li{

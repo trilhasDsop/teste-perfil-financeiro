@@ -1,19 +1,28 @@
 @import '../Abstract/color.module.scss';
 
 .header__menu{
-   padding: 70px 24px 56px 24px;
+   padding: 70px 24px 56px 24px; 
 }
 
 .header__menu__nav{
    max-width: 1440px;
    margin: 0 auto;
    display: flex;
+   flex-wrap: wrap;
    gap: 48px;
    justify-content: space-between;
    align-items: center;
+
+   .header__menu__logo{
+      position: relative;
+      z-index: 100;
+      flex-shrink: 0;
+   }
 }
 
 .header__menu__lista{
+   position: relative;
+   z-index: 100;
    display: flex;
    align-items: center;
    gap: 16px;
