@@ -1,0 +1,124 @@
+@import '../Abstract/color.module.scss';
+
+.main__home{
+   padding: 0 24px;
+}
+
+.main__homeContainer{
+   max-width: 1440px;
+   margin: 0 auto;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 48px;
+
+   .main__home__divTexto{
+      h1{
+         margin-bottom: 6px;
+         font-family: 'Gilroy-extrabold', sans-serif;
+         font-size: 2.5rem;
+         line-height: 50px;
+         color: $cor-verde;
+      }
+   
+      p{
+         max-width: 463px;
+         color: $cor-branco-2;
+         font-size: 1rem;
+         line-height: 146.54%;
+      }
+   }
+
+   .main__home__divImg{
+      flex-shrink: 0;
+   }
+}
+
+.section1__home{
+   padding: 130px 24px 160px 24px;
+}
+
+.section1__homecontainer{
+   max-width: 890px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+
+   h1{
+      display: flex;
+      gap: 14px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Gilroy-bold', sans-serif;
+      font-size: 1.875rem;
+      line-height: 36px;
+      text-align: center;
+      color: #FFFFFF;
+   }
+}
+
+.section1__home__article{
+   h2{
+      margin-bottom: 20px;
+      font-family: 'Gilroy-bold', sans-serif;
+      font-size: 1.5625rem;
+      line-height: 35px;
+      color: $cor-branco-1;
+   }
+}
+
+.section1__home__articleQuestoes{
+   display: flex;
+   flex-direction: column;
+   gap: 13px;
+   
+   li{
+      padding: 19px 30px;
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      color: $cor-branco-2;
+      font-family: 'Gilroy-medium', sans-serif;
+      font-size: 1rem;
+      line-height: 19px;
+      border: 1px solid $cor-verde;
+      border-radius: 10px;
+      cursor: pointer;
+
+      span{
+         font-family: 'Gilroy-bold', sans-serif;
+         font-size: 1.5625rem;
+         line-height: 30px;
+         color: $cor-verde;
+      }
+
+      &:hover{
+         color: $cor-verde;
+         font-family: 'Gilroy-bold', sans-serif;
+      }
+   }
+}
+
+.section1__home__divbutton{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   gap: 16px;
+   font-size: 1.25rem;
+
+   a:first-child{
+      padding: 10px 12px;
+      color: $cor-branco-2;
+      font-family: 'Gilroy-semibold', sans-serif;
+   }
+
+   a:last-child{
+      padding: 10px 53px;
+      background-color: $cor-verde;
+      border-radius: 44px;
+      font-family: 'Gilroy-bold', sans-serif;
+      color: $cor-preto-1;
+   }
+}

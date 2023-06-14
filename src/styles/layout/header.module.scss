@@ -1,0 +1,42 @@
+@import '../Abstract/color.module.scss';
+
+.header__menu{
+   padding: 70px 24px 56px 24px;
+}
+
+.header__menu__nav{
+   max-width: 1440px;
+   margin: 0 auto;
+   display: flex;
+   gap: 48px;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.header__menu__lista{
+   display: flex;
+   align-items: center;
+   gap: 16px;
+   font-size: 1.25rem;
+
+   li:first-child{
+      font-family: 'Gilroy-semibold', sans-serif;
+      a{
+         padding: 10px 12px;
+         display: block;
+         color: $cor-branco-2;
+      }
+   }
+
+   li:last-child{
+      background-color: $cor-verde;
+      border-radius: 44px;
+      font-family: 'Gilroy-bold', sans-serif;
+
+      a{
+         padding: 10px 22px;
+         display: block;
+         color: $cor-preto-1;
+      }
+   }
+}
