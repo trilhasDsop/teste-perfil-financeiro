@@ -58,6 +58,7 @@ body{
       background-color: #12FF00;
       opacity: 0.19;
       filter: blur(125px);
+      z-index: -1;
    }
    &::after{
       content: '';
@@ -69,6 +70,7 @@ body{
       background-color: #12FF00;
       opacity: 0.19;
       filter: blur(125px);
+      z-index: -1;
    }
 }
  
