@@ -1,0 +1,126 @@
+@import '../abstract/color.module.scss';
+
+.sectionResultado__container{
+   max-width: 938px;
+   margin: 0 auto;
+   padding: 0 24px;
+}
+
+.sectionResultado__articlePerfil{
+   margin: 100px 0;
+   
+   .sectionResultado__articlePerfil__divflex{
+      display: flex;
+      align-items: center;
+      gap: 42px;
+
+      h1{
+         position: relative;
+         font-family: 'Gilroy-bold', sans-serif;
+         font-size: 50px;
+         line-height: 60px;
+         color: $cor-verde;
+
+         span{
+            font-size: 30px;
+            line-height: 36px;
+         }
+
+         &::after{
+            content: '';
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: -21px;
+            display: block;
+            background-color: $cor-cinza;
+         }
+      }
+
+      p{
+         font-family: 'Gilroy-medium', sans-serif;
+         font-size: 16px;
+         line-height: 146.54%;
+         color: $cor-branco-2;
+
+         strong{
+            font-family: 'Gilroy-bold', sans-serif;
+         }
+      }
+   }
+}
+
+.sectionResultado__article2Container{
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+   
+   h1{
+      display: flex;
+      gap: 14px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Gilroy-bold', sans-serif;
+      font-size: 1.875rem;
+      line-height: 36px;
+      text-align: center;
+      color: #FFFFFF;
+   }
+}
+
+.sectionResultado__article3Container{
+   margin: 100px 0 85px 0;
+   display: flex;
+   flex-direction: column;
+   gap: 50px;
+
+   h1{
+      display: flex;
+      gap: 14px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Gilroy-bold', sans-serif;
+      font-size: 1.875rem;
+      line-height: 36px;
+      text-align: center;
+      color: #FFFFFF;
+   }
+   
+   .sectionResultado__divplaylist{
+      text-align: right;
+      
+      a{
+         font-family: 'Gilroy-bold', sans-serif;
+         font-size: 1.25rem;
+         line-height: 24px;
+         color: #12FF00;
+      }
+   }
+}
+
+.sectionResultado__gridlista{
+   display: grid;
+   gap: 81px;
+   grid-template-columns: repeat(3, 1fr);
+   
+   .sectionResultado__gridlista__container{
+      background-color: #0E0E0E;
+      border-radius: 16px;
+      overflow: hidden;
+   }
+
+   a{
+      padding: 13px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Gilroy-bold', sans-serif;
+      font-size: 1.125rem;
+      line-height: 24px;
+      text-align: center;
+      color: #F1F0F3;
+   }
+}
