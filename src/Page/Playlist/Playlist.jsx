@@ -8,17 +8,17 @@ const questoes = [
       {
         'letra': 'A',
         'texto': 'É suficiente, mas não sobra nada.',
-        'pontos': 5 
+        'pontos': 5,
       },
       {
         'letra': 'B',
         'texto': 'Consigo pagar minhas contas e ainda guardo mais 10% dos meus ganhos todo mês.',
-        'pontos': 10 
+        'pontos': 10,
       },
       {
         'letra': 'C',
         'texto': 'Gasto todo o meu dinheiro e ainda uso o limite de cheque especial ou peço emprestado para parentes e amigos.',
-        'pontos': 0 
+        'pontos': 0,
       }
     ]
   },
@@ -69,7 +69,7 @@ const questoes = [
 function perfil(pontuacao){
   if(pontuacao >= 0 && pontuacao <= 15){
     return ({
-      perfil: 'Super endividado',
+      perfil: 'Superendividado',
       descricao: `Muita calma nessa hora! Estar Superendividado, acredite, é o começo de uma nova história. Não nascemos
 			endividados e nem mesmo investidores. Ganhamos e gastamos o dinheiro, ele é um meio importante, mas não podemos tê-lo como um fim. O verdadeiro fim são nossos sonhos e propósitos, assim como os de nossas famílias. É possível que esse desequilíbrio tenha sua procedência lá no passado. Ainda quando criança, talvez se lembre ou não, de seu primeiro contato com o dinheiro, quando gastou tudo com balas, sorvete e chocolates. 
       Não foi diferente quando se alfabetizou, mesmo sabendo fazer cálculos, continuou gastando.
@@ -150,9 +150,9 @@ export const Playlist = () => {
   }
 
   function clickItem(e){
-    //
+    //console.log(e)
     //console.log(e.parentElement.classList.add('ativo'))
-    console.log(e.parentElement.classList.add('ativo'))
+    //console.log(e.parentElement.classList.add('ativo'))
     //console.log(e.classList.contains('ativo'))
 
     //console.log(container.current.classList.add('ativo'))
@@ -186,9 +186,7 @@ function Radio({id, questao, alternativas, onchange, valor, refContainer, refIte
       <h2 style={{marginBottom: '20px'}}>{questao}</h2>
       {alternativas?.map((alternativa) => (
         <label key={alternativa.texto} ref={refItem} onClick={({target}) => clickItem(target)}
-          style={{
-            display: 'flex', gap: '13px', marginTop: '10px', border: '2px solid green', padding: '12px 30px', borderRadius: '10px'
-          }}
+          style={{display: 'flex', gap: '13px', marginTop: '10px', border: '2px solid green', padding: '12px 30px', borderRadius: '10px'}}
         >
           <input 
             type='radio'
@@ -196,7 +194,7 @@ function Radio({id, questao, alternativas, onchange, valor, refContainer, refIte
             checked={valor === alternativa.texto}
             value={alternativa.texto}
             onChange={({target}) => onchange(questao, alternativa, target)}
-            //style={{appearance: 'none', margin: 0, padding: 0}}
+            //style={{appearance: 'auto', margin: 0}}
           />
           <span>{alternativa.letra}</span> {alternativa.texto}
         </label>
