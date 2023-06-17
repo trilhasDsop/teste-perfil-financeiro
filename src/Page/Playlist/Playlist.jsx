@@ -1,4 +1,5 @@
 import React from 'react'
+import styleHome from '../../styles/page/home.module.scss';
 
 const questoes = [
   {
@@ -6,16 +7,19 @@ const questoes = [
     'questao': 'O que você ganha por mês é suficiente para arcar com os seus gastos?',
     'alternativas': [
       {
+        'id': 'p1A',
         'letra': 'A',
         'texto': 'É suficiente, mas não sobra nada.',
         'pontos': 5,
       },
       {
+        'id': 'p1B',
         'letra': 'B',
         'texto': 'Consigo pagar minhas contas e ainda guardo mais 10% dos meus ganhos todo mês.',
         'pontos': 10,
       },
       {
+        'id': 'p1C',
         'letra': 'C',
         'texto': 'Gasto todo o meu dinheiro e ainda uso o limite de cheque especial ou peço emprestado para parentes e amigos.',
         'pontos': 0,
@@ -27,16 +31,19 @@ const questoes = [
     'questao': 'Você tem conseguido pagar suas despesas em dia e à vista?',
     'alternativas': [
       {
+        'id': 'p2A',
         'letra': 'A',
         'texto': 'Sempre parcelo os meus compromissos e utilizo linhas de crédito como cheque especial, cartão de crédito e crediário.',
         'pontos': 0 
       },
       {
+        'id': 'p2B',
         'letra': 'B',
         'texto': 'Pago em dia, à vista e, em alguns casos, com bons descontos.',
         'pontos': 10 
       },
       {
+        'id': 'p2C',
         'letra': 'C',
         'texto': 'Quase sempre, mas tenho que parcelar as compras de maior valor.',
         'pontos': 5 
@@ -48,16 +55,19 @@ const questoes = [
     'questao': 'Você realiza seu orçamento financeiro mensalmente?',
     'alternativas': [
       {
+        'id': 'p3A',
         'letra': 'A',
         'texto': 'Somente registro o realizado, sem analisar os gastos.',
         'pontos': 5 
       },
       {
+        'id': 'p3B',
         'letra': 'B',
         'texto': 'Não faço o meu orçamento financeiro.',
         'pontos': 0 
       },
       {
+        'id': 'p3C',
         'letra': 'C',
         'texto': 'Faço periodicamente e comparo o orçado com o realizado.',
         'pontos': 10 
@@ -127,14 +137,12 @@ export const Playlist = () => {
     p2: '',
     p3: '',
   });
-  const containerLista = React.useRef();
-  const containerItem = React.useRef();
   const [pontos, setPontos] = React.useState({});
   const [resultado, setResultado] = React.useState([]);
 
-  function handleChange(questao, alternativa, target){
-    setRespostas({...respostas, [target.id]: [target.id, questao, alternativa]})
-    setPontos({...pontos, [target.id]: alternativa.pontos})
+  function handleChange(questao, alternativa, id){
+    setRespostas({...respostas, [id]: [id, questao, alternativa]})
+    setPontos({...pontos, [id]: alternativa.pontos})
   }
 
   function handleClick(e){
@@ -143,35 +151,24 @@ export const Playlist = () => {
     if(respostas.p1 && respostas.p2 && respostas.p3){
       const pontuacao = Object.values(pontos).reduce((acc, atual) => acc+atual); 
       setResultado([{resultado: perfil(pontuacao)}]);
+      console.log(respostas, pontuacao)
     }
     else{
       console.log('não exite, ativar Snackbar')
     }
   }
 
-  function clickItem(e){
-    //console.log(e)
-    //console.log(e.parentElement.classList.add('ativo'))
-    //console.log(e.parentElement.classList.add('ativo'))
-    //console.log(e.classList.contains('ativo'))
-
-    //console.log(container.current.classList.add('ativo'))
-  }
-
   return(
     <form style={{color: '#fff', display: 'flex', flexDirection: 'column', gap: '50px', maxWidth: '900px', margin: '0 auto'}}>
-      {questoes.map((q) => (
+      {questoes?.map((q) => (
         <Radio 
           key={q.id}
-          refContainer={containerLista}
-          refItem={containerItem}
           valor={respostas[q.id][2]?.texto}
           onchange={handleChange}
-          clickItem={clickItem}
           {...q}
         />
       ))}
-      
+
       <button onClick={handleClick} style={{marginBottom: '50px', padding: '24px'}}>Enviar</button>
       {resultado.length > 0 && (
         <p style={{color: '#fff', fontSize: '2rem', textAlign: 'center', marginBottom: '80px'}}>{resultado[0]?.resultado.perfil}</p>
@@ -181,20 +178,58 @@ export const Playlist = () => {
 }
 
 function Radio({id, questao, alternativas, onchange, valor, refContainer, refItem, clickItem}){
+  const container = React.useRef(null);
+
+  React.useLayoutEffect(() => {
+    /**const getInput = document.querySelectorAll('.ativoINPUT')
+
+    getInput.forEach((input) => {
+      input.style.backgroundColor = 'transparent';
+
+      if(input.classList.contains('ativoINPUT')){
+        input.style.backgroundColor = '#12FF00';
+        input.style.color = 'black';
+        //input.style.backgroundColor = 'transparent';
+        console.log(input.classList.remove('ativoINPUT'))
+        input.classList.remove('ativoINPUT')
+      }
+      else{
+        input.style.backgroundColor = 'transparent';
+        input.style.color = 'black';
+      }
+    }) */
+  })
+
+  function clickItem(target){
+    const xxArray = Array.from(container.current.children)
+    
+    xxArray.forEach((element) => {
+      if(element.classList.contains(`ativo${target.tagName}`)){
+        element.style.backgroundColor = 'transparent';
+        element.style.color = '#fff';
+      }
+     
+      element.classList.remove(`ativo${target.tagName}`)
+    })
+
+    target.parentElement.classList.add(`ativo${target.tagName}`); 
+    target.style.backgroundColor = '#12FF00';
+    target.style.color = '#000';
+  }
+
   return(
-    <div ref={refContainer}>
+    <div ref={container} className={styleHome.texte}> 
       <h2 style={{marginBottom: '20px'}}>{questao}</h2>
       {alternativas?.map((alternativa) => (
-        <label key={alternativa.texto} ref={refItem} onClick={({target}) => clickItem(target)}
-          style={{display: 'flex', gap: '13px', marginTop: '10px', border: '2px solid green', padding: '12px 30px', borderRadius: '10px'}}
+        <label key={alternativa.texto} className={styleHome.labell} onClick={({target}) => clickItem(target)}       
         >
           <input 
             type='radio'
-            id={id}
+            id={alternativa.id}
             checked={valor === alternativa.texto}
             value={alternativa.texto}
-            onChange={({target}) => onchange(questao, alternativa, target)}
-            //style={{appearance: 'auto', margin: 0}}
+            onChange={() => onchange(questao, alternativa, id)}
+            style={{appearance: 'none', margin: 0, pointerEvents: 'none'}}
           />
           <span>{alternativa.letra}</span> {alternativa.texto}
         </label>

@@ -182,3 +182,20 @@
       filter: blur(125px);
    }
 }
+
+.texte{
+   .labell{
+      display: flex;
+      gap: 13px;
+      margin-top: 20px; 
+      border: 1px solid #12FF00;
+      padding: 22px 30px;
+      border-radius: 10px;
+      cursor: pointer;
+      
+   }
+
+   input{
+      pointer-events: none;
+   }
+}
