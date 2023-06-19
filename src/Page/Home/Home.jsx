@@ -1,71 +1,118 @@
 import React from 'react';
 import ilustracao from '../../assets/img/Ilustracao2.svg';
 import styleHome from '../../styles/page/home.module.scss';
+import { Radio } from '../../Components/Radio/Radio';
+import { Titulo } from '../../Components/Titulo/Titulo';
+
+import { useNavigate } from 'react-router-dom';
 
 const questoes = [
    {
-      'questao': 'O que você ganha por mês é suficiente para arcar com os seus gastos?',
-      'alternativas': [
-         {
-            'letra': 'A',
-            'texto': 'É suficiente, mas não sobra nada.',
-            'pontos': 5 
-         },
-         {
-            'letra': 'B',
-            'texto': 'Consigo pagar minhas contas e ainda guardo mais 10% dos meus ganhos todo mês.',
-            'pontos': 10 
-         },
-         {
-            'letra': 'C',
-            'texto': 'Gasto todo o meu dinheiro e ainda uso o limite de cheque especial ou peço emprestado para parentes e amigos.',
-            'pontos': 0 
-         }
-      ]
+     'id': 'p1',
+     'questao': 'O que você ganha por mês é suficiente para arcar com os seus gastos?',
+     'alternativas': [
+       {
+         'id': 'p1A',
+         'letra': 'A',
+         'texto': 'É suficiente, mas não sobra nada.',
+         'pontos': 5,
+       },
+       {
+         'id': 'p1B',
+         'letra': 'B',
+         'texto': 'Consigo pagar minhas contas e ainda guardo mais 10% dos meus ganhos todo mês.',
+         'pontos': 10,
+       },
+       {
+         'id': 'p1C',
+         'letra': 'C',
+         'texto': 'Gasto todo o meu dinheiro e ainda uso o limite de cheque especial ou peço emprestado para parentes e amigos.',
+         'pontos': 0,
+       }
+     ]
    },
    {
-      'questao': 'Você tem conseguido pagar suas despesas em dia e à vista?',
-      'alternativas': [
-         {
-            'letra': 'A',
-            'texto': 'Sempre parcelo os meus compromissos e utilizo linhas de crédito como cheque especial, cartão de crédito e crediário.',
-            'pontos': 0 
-         },
-         {
-            'letra': 'B',
-            'texto': 'Pago em dia, à vista e, em alguns casos, com bons descontos.',
-            'pontos': 10 
-         },
-         {
-            'letra': 'C',
-            'texto': 'Quase sempre, mas tenho que parcelar as compras de maior valor.',
-            'pontos': 5 
-         }
-      ]
+     'id': 'p2',
+     'questao': 'Você tem conseguido pagar suas despesas em dia e à vista?',
+     'alternativas': [
+       {
+         'id': 'p2A',
+         'letra': 'A',
+         'texto': 'Sempre parcelo os meus compromissos e utilizo linhas de crédito como cheque especial, cartão de crédito e crediário.',
+         'pontos': 0 
+       },
+       {
+         'id': 'p2B',
+         'letra': 'B',
+         'texto': 'Pago em dia, à vista e, em alguns casos, com bons descontos.',
+         'pontos': 10 
+       },
+       {
+         'id': 'p2C',
+         'letra': 'C',
+         'texto': 'Quase sempre, mas tenho que parcelar as compras de maior valor.',
+         'pontos': 5 
+       }
+     ]
    },
    {
-      'questao': 'Você realiza seu orçamento financeiro mensalmente?',
-      'alternativas': [
-         {
-            'letra': 'A',
-            'texto': 'Somente registro o realizado, sem analisar os gastos.',
-            'pontos': 5 
-         },
-         {
-            'letra': 'B',
-            'texto': 'Não faço o meu orçamento financeiro.',
-            'pontos': 0 
-         },
-         {
-            'letra': 'C',
-            'texto': 'Faço periodicamente e comparo o orçado com o realizado.',
-            'pontos': 10 
-         }
-      ]
+     'id': 'p3',
+     'questao': 'Você realiza seu orçamento financeiro mensalmente?',
+     'alternativas': [
+       {
+         'id': 'p3A',
+         'letra': 'A',
+         'texto': 'Somente registro o realizado, sem analisar os gastos.',
+         'pontos': 5 
+       },
+       {
+         'id': 'p3B',
+         'letra': 'B',
+         'texto': 'Não faço o meu orçamento financeiro.',
+         'pontos': 0 
+       },
+       {
+         'id': 'p3C',
+         'letra': 'C',
+         'texto': 'Faço periodicamente e comparo o orçado com o realizado.',
+         'pontos': 10 
+       }
+     ]
    },
-]
-
+];
+ 
 export const Home = () => {
+   const navigate = useNavigate();
+   const [respostas, setRespostas] = React.useState({
+      p1: '',
+      p2: '',
+      p3: '',
+   });
+   const [pontos, setPontos] = React.useState({});
+   const [resultado, setResultado] = React.useState([]);
+  
+   function handleChange(questao, alternativa, id){
+      setRespostas({...respostas, [id]: [id, questao, alternativa]})
+      setPontos({...pontos, [id]: alternativa.pontos})
+   }
+  
+   function handleClick(e){
+      e.preventDefault();
+  
+      if(respostas.p1 && respostas.p2 && respostas.p3){
+        const pontuacao = Object.values(pontos).reduce((acc, atual) => acc+atual); 
+        //setResultado([{resultado: perfil(pontuacao)}]);
+        if(pontuacao){
+         navigate('/resultado')
+        }
+      }
+      else{
+        console.log('não exite, ativar Snackbar')
+      }
+   }
+
+   console.log(respostas)
+
    return (
       <>
          <main className={styleHome.main__home}>
@@ -82,80 +129,23 @@ export const Home = () => {
          </main>
 
          <section className={styleHome.section1__home}>
-            <div className={styleHome.section1__homecontainer}>
-               <h1>Inicie seu questionário
-                  <svg width="18" height="5" viewBox="0 0 18 5" fill="none" xmlns="http: www.w3.org/2000/svg">
-                     <path d="M1 1L9 3L17 1" stroke="#12FF00" strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-               </h1>
+            <Titulo>Inicie seu questionário</Titulo>
 
-               <article className={styleHome.section1__home__article}>
-                  <h2>O que você ganha por mês é suficiente para arcar com os seus gastos?</h2>
-                  <ul className={styleHome.section1__home__articleQuestoes}>
-                     <li>
-                     <span>A</span> Consigo pagar meus gastos e ainda guardo parte dos meus ganhos.
-                     </li>
-                     <li>
-                     <span>B</span> É suficiente, mas não sobra nada.
-                     </li>
-                     <li>
-                     <span>C</span> Gasto todo o meu dinheiro e ainda utilizo linhas de crédito para cumprir com meus compromissos do mês.
-                     </li>
-                  </ul>
-               </article>
-
-               <article className={styleHome.section1__home__article}>
-                  <h2>O seu seguro de vida é suficiente para garantir sua independência financeira e/ou invalidez?</h2>
-                  <ul className={styleHome.section1__home__articleQuestoes}>
-                     <li>
-                     <span>A</span> Consigo pagar meus gastos e ainda guardo parte dos meus ganhos.
-                     </li>
-                     <li>
-                     <span>B</span> É suficiente, mas não sobra nada.
-                     </li>
-                     <li>
-                     <span>C</span> Gasto todo o meu dinheiro e ainda utilizo linhas de crédito para cumprir com meus compromissos do mês.
-                     </li>
-                  </ul>
-               </article>
-
-               <article className={styleHome.section1__home__article}>
-                  <h2>Você realiza seu orçamento financeiro?</h2>
-                  <ul className={styleHome.section1__home__articleQuestoes}>
-                     <li>
-                     <span>A</span> Não faço meu orçamento financeiro.
-                     </li>
-                     <li>
-                     <span>B</span> Somente registro o realizado mas não faço qualquer análise.
-                     </li>
-                     <li>
-                     <span>C</span> Faço periodicamente, analiso e comparo o orçado com o realizado.
-                     </li>
-                  </ul>
-               </article>
-
-               {/* {
-                  questoes && questoes.map((q, index) => (
-                     <article key={index} className={styleHome.section1__home__article}>
-                        <h2>{q.questao}</h2>
-                        {q.alternativas.map((alternativa, i) => (
-                           <ul key={i} className={styleHome.section1__home__articleQuestoes}>
-                              <li><span>{alternativa.letra}</span>
-                                 {alternativa.texto}
-                              </li>
-                           </ul>
-                        ))}
-                        
-                     </article>
-                  ))
-               } */}
-
+            <form className={styleHome.section1__homecontainer}>
+               {questoes?.map((q) => (
+                  <Radio 
+                     key={q.id}
+                     valor={respostas[q.id][2]?.texto}
+                     onchange={handleChange}
+                     {...q}
+                  />
+               ))}
 
                <div className={styleHome.section1__home__divbutton}>
-                  <a href="#">Resetar</a>
-                  <a href="resultado">Enviar</a>
+                  <a href="/">Resetar</a>
+                  <button onClick={handleClick}>Enviar</button>
                </div>
-            </div>
+            </form>
          </section>
 
          <div className={styleHome.divelipse}></div>
