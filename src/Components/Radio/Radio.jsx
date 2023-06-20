@@ -6,7 +6,7 @@ export const Radio = ({id, questao, alternativas, onchange, valor}) => {
 
   function clickItem(target){
     const articleArray = Array.from(container.current.children)
-
+    
     articleArray.forEach((element) => {
       if(element.classList.contains(`ativo${target.tagName}`)){
         element.style.cssText = `
@@ -17,8 +17,7 @@ export const Radio = ({id, questao, alternativas, onchange, valor}) => {
         element.children[1].style.color =  '#12FF00';
         element.classList.remove(`ativo${target.tagName}`)
       }
-      
-      //element.classList.remove(`ativo${target.tagName}`)
+      element.classList.remove(`ativo${target.tagName}`) 
     })
   
     target.parentElement.classList.add(`ativo${target.tagName}`); 
