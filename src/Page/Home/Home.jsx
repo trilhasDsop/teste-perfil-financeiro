@@ -43,14 +43,14 @@ export const Home = () => {
     <>
         <main className={styleHome.main__home}>
           <div className={styleHome.main__homeContainer}>
-              <div className={styleHome.main__home__divTexto}>
+            <div className={styleHome.main__home__divTexto}>
               <h1>Teste de Perfil Financeiro</h1>
               <p>Vivamus tristique lorem ac dolor luctus faucibus. Curabitur magna orci, sodales ut lacus sed, pretium convallis augue. Nullam tincidunt a augue non rutrum. </p>
-              </div>
+            </div>
 
-              <div className={styleHome.main__home__divImg}>
+            <div className={styleHome.main__home__divImg}>
               <img src={ilustracao} alt="imagem ilustrativa de teste de perfil"/>
-              </div>
+            </div>
           </div>
         </main>
 

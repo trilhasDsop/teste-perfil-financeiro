@@ -22,12 +22,12 @@ export const Radio = ({id, questao, alternativas, onchange, valor}) => {
   
     target.parentElement.classList.add(`ativo${target.tagName}`); 
     target.style.cssText = `
-      color: #000 !important;
+      color: #131313!important;
       background-color: #12FF00;
       appearance: none;
       font-family: Gilroy-bold, sans-serif;
     `;
-    target.children[1]?.tagName === 'SPAN' ? target.children[1].style.color = '#000' : null;
+    target.children[1]?.tagName === 'SPAN' ? target.children[1].style.color = '#131313' : null;
   }
 
   return(
