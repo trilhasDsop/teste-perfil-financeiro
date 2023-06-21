@@ -1,0 +1,48 @@
+@import '../abstract/color.module.scss';
+
+.snackbar{  
+   position: fixed;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%);
+   z-index: 100;
+
+   .snackbar__container{
+      max-width: 662px;
+      margin: 0 auto;
+      padding: 20px 26px 20px 20px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      align-items: center;
+      background-color: $cor-preto-2;
+      border-radius: 10px;
+      opacity: 0;
+      transform: translateY(auto);
+      animation: show-snackbar 1s ease forwards;
+      transition: all .3s;
+
+      button{
+         padding: 4px;
+         background-color: transparent;
+         border: none;
+         cursor: pointer;
+      }
+
+      p{
+         color: $cor-branco-2;
+         font-family: 'Gilroy-medium', sans-serif;
+         font-size: 1rem;
+      }
+   }
+}
+
+@keyframes show-snackbar {
+   from{
+      opacity: 0;
+   }
+   to{
+      opacity: 1;
+      transform: translateY(-30px);
+   }
+}
