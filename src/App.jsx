@@ -5,6 +5,7 @@ import { Home } from './Page/Home/Home';
 import { Resultado } from './Page/Resultado/Resultado';
 import { Playlist } from './Page/Playlist/Playlist';
 import User from './Context/dataContext';
+import ButtonTop from './Components/Button/ButtonTop';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='playlist' element={<Playlist />} />
         </Routes>
       </User>
+      <ButtonTop />
     </BrowserRouter>
   )
 }
