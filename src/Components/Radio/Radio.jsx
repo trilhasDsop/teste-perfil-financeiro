@@ -13,6 +13,7 @@ export const Radio = ({id, questao, alternativas, onchange, valor}) => {
           color: #fff;
           background-color: transparent;
           font-family: Gilroy-medium, sans-serif;
+          pointer-events: auto;
         `;
         element.children[1].style.color =  '#12FF00';
         element.classList.remove(`ativo${target.tagName}`)
@@ -26,6 +27,7 @@ export const Radio = ({id, questao, alternativas, onchange, valor}) => {
       background-color: #12FF00;
       appearance: none;
       font-family: Gilroy-bold, sans-serif;
+      pointer-events: none;
     `;
     target.children[1]?.tagName === 'SPAN' ? target.children[1].style.color = '#131313' : null;
   }

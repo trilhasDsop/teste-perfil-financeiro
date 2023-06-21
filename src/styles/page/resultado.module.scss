@@ -54,6 +54,42 @@
 .sectionResultado__article2Container{
    display: flex;
    flex-direction: column;
+
+   .sectionResultado__article2resultado{
+      & + article{
+         margin-top: 50px;
+      }
+
+      h2{
+         margin-bottom: 20px;
+         font-family: 'Gilroy-bold', sans-serif;
+         font-size: 1.5625rem;
+         line-height: 35px;
+         color: $cor-branco-1;
+      }
+   }
+
+   .sectionResultado__article2resultado__questao{
+      padding: 19px 30px;
+      margin-top: 20px;
+      display: flex;
+      gap: 19px;
+      align-items: center;
+      position: relative;
+      color: $cor-branco-2;
+      font-family: 'Gilroy-medium', sans-serif;
+      font-size: 1rem;
+      line-height: 22.4px;
+      border: 1px solid $cor-verde;
+      border-radius: 10px;
+
+      span{
+         font-family: 'Gilroy-bold', sans-serif;
+         font-size: 1.5625rem;
+         line-height: 30px;   
+         color: $cor-verde;
+      }
+   }
 }
 
 .sectionResultado__article3Container{

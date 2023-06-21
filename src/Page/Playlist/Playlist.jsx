@@ -21,7 +21,7 @@ export const Playlist = () => {
           <div className={stylePlaylist.articlelist__gridlista}>
             {playList[0]?.map((list) => (
               <a 
-                key={list.id} href='#' title={list.nome}
+                key={list.id} href={list.link_url} target='_blank' title={list.nome}
                 className={stylePlaylist.articlelist__gridlista__container} 
               >
                 <img src={list.url_foto} alt={list.nome} />

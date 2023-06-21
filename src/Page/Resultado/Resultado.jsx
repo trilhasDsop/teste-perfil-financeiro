@@ -38,13 +38,11 @@ export const Resultado = () => {
           <Titulo>Seus resultados</Titulo>
           
           {questoes?.map((questao, i) => (
-            <article key={i} className={styleHome.section1__home__article}>
+            <article key={i} className={styleResultado.sectionResultado__article2resultado}>
               <h2>{questao[1]}</h2>
-                <ul className={styleHome.section1__home__articleQuestoes}>
-                  <li>
-                    <span>{questao[2]?.letra}</span> {questao[2]?.texto}
-                  </li>
-                </ul>
+                <p className={styleResultado.sectionResultado__article2resultado__questao}>
+                  <span>{questao[2]?.letra}</span> {questao[2]?.texto}
+                </p>
             </article>
           ))}
         </article>
@@ -54,7 +52,7 @@ export const Resultado = () => {
 
           <div className={styleResultado.sectionResultado__gridlista}>
             {playList[0].filter((p, i) => i < 3).map((list) => (
-              <a key={list.id} href='#' className={styleResultado.sectionResultado__gridlista__container} title={list.nome}>
+              <a key={list.id} href={list.link_url} target='_blank' className={styleResultado.sectionResultado__gridlista__container} title={list.nome}>
                 <img src={list.url_foto} alt={list.nome} />
                 <p>{list.nome}</p>
               </a>

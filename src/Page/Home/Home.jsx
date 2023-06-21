@@ -60,10 +60,10 @@ export const Home = () => {
           <form className={styleHome.section1__homecontainer}>
               {questoes?.map((q) => (
                 <Radio 
-                    key={q.id}
-                    valor={respostas[q.id][2]?.texto}
-                    onchange={handleChange}
-                    {...q}
+                  key={q.id}
+                  valor={respostas[q.id][2]?.texto}
+                  onchange={handleChange}
+                  {...q}
                 />
               ))}
 
