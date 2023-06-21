@@ -249,15 +249,17 @@ function perfil(pontuacao){
   if(pontuacao >= 0 && pontuacao <= 15){
     return ({
       perfil: 'Superendividado',
-      descricao: `Muita calma nessa hora! Estar Superendividado, acredite, é o começo de uma nova história. Não nascemos
-			endividados e nem mesmo investidores. Ganhamos e gastamos o dinheiro, ele é um meio importante, mas não podemos tê-lo como um fim. O verdadeiro fim são nossos sonhos e propósitos, assim como os de nossas famílias. É possível que esse desequilíbrio tenha sua procedência lá no passado. Ainda quando criança, talvez se lembre ou não, de seu primeiro contato com o dinheiro, quando gastou tudo com balas, sorvete e chocolates. 
-      Não foi diferente quando se alfabetizou, mesmo sabendo fazer cálculos, continuou gastando.
-			Assim foi na adolescência e na fase adulta. Outra fase foi quando recebeu seu primeiro salário, se lembra? Provavelmente gastou tudo. E assim o ciclo continuou, só que quando criança e jovem os bancos eram os pais/responsáveis, que não cobravam juros ao doar dinheiro para você, agora isso mudou. O ciclo do endividamento começa exatamente aí. 
-			Não podemos criticar as formas de créditos. Sempre falo isso em meu canal de Youtube Dinheiro à Vista. Quando o crédito é utilizado de forma consciente, ou seja, a favor, pode ser um grande aliado. Contudo, mesmo estando inadimplente, é preciso entender que essa situação é plenamente favorável, independentemente de ter seu nome SUJO e negativado ou não. Relato isso em meu livro NOME SUJO PODE SER A SOLUÇÃO: quando se chega a essa situação é a certeza que novos caminhos virão pela frente. É um marco de um novo começo, para conquistar um novo fim! A orientação em seu caso é de muita calma e serenidade. Tudo é possível, não tenha dúvida. O caminho será se educar financeiramente e será preciso seguir um jeito de fazer, que vamos chamar de Metodologia DSOP de Educação Financeira, que é de minha autoria. Essa Metodologia me levou a minha independência financeira aos 37 anos de idade. Ela se encontra no meu long-seller  Terapia Financeira. Recomento que leia também o livro NOME SUJO PODE SER A SOLUÇÃO.
-			Chegou a hora de assumir as rédeas de sua vida financeira e dar um basta nessa situação!
-			Eu acredito em você! Entretanto, só faltava até minutos atrás você também acreditar. 
-			Portanto mãos à obra! Reinaldo Domingos é PhD. em Educação Financeira, educador e terapeuta financeiro, presidente da DSOP Educação Financeira e da Associação Brasileira de Educadores Financeiros`,
-      autor: 'Ph.D Reinaldo Domingos'
+      descricao: [
+        'Quando passamos a pegar crédito nos bancos, acabamos caindo no ciclo do endividamento ao nos depararmos com os juros e nossa falta de educação financeira.',
+        'Não podemos criticar as formas de crédito, pois quando bem utilizadas, se tornam grandes aliadas.',
+        'A orientação é, antes de mais nada, manter a calma. Lembre-se: estando inadimplente, com nome sujo, negativado ou não, o caminho é sempre para a frente. Seguir uma metodologia de educação financeira, como a DSOP, que te eduque como seguir nessa situação, é o ideal. Acredite que você pode assumir as rédeas da sua vida financeira!',
+        'Para te ajudar na sua caminhada, te indicamos a playlist abaixo:',
+        ''
+      ],
+      links: [
+        'Terapia Financeira;',
+        'Nome sujo pode ser a solução'
+      ],
     })
   }
   else if(pontuacao >= 16 && pontuacao <= 45){
@@ -267,14 +269,12 @@ function perfil(pontuacao){
 			Ao longo de minha vida como educador e terapeuta financeiro já presenciei diversas situações parecidas com a sua, e acredite, todas elas conseguiram se reerguer muito rapidamente, aplicando a Metodologia DSOP de Educação Financeira, a qual eu sou o Mentor. Para tanto, é preciso acreditar no seu “Eu”, no seu “Ser”, e saber que, com muita perseverança, poderá mudar essa condição de endividado para até mesmo se tornar um investidor. É possível que ao
 			longo de sua vida os seus hábitos financeiros sempre colocaram os gastos em primeiro lugar, ou seja, o dinheiro que passou pelas suas mãos teve seu destino priorizando o consumo, mas não se culpe, isso aconteceu também com nossos antepassados, que em nenhum momento aprenderam Educação Financeira. Também algo que ficou marcado nessa minha trajetória é que estar nessa situação de endividamento, muitas vezes é melhor do que estar numa situação de equilíbrio financeiro. Acredito nisso porque o estado de endividamento já provoca uma necessidade de atitude, de não mais permanecer nessa situação. Então, nada de perder mais tempo do que já perdeu, a hora chegou! Vamos virar esse jogo, estou com você, e vamos imediatamente envolver sua família nisso, não queira resolver tudo sozinho, já que a família unida jamais será vencida. E me coloco também nessa nova família. Praticar os 4 passos da Metodologia DSOP (Diagnosticar, Sonhar, Orçar e Poupar) fará com que você se empodere, que você renasça para a vida e o que mais vai fazer com que você tenha êxito serão os resgates de seus sonhos e propósitos, entre estes, o de sair dessa situação de endividamento, mas lembre-se que esse não pode ser o único, pois todos de sua família, inclusive você, precisam sonhar.
 			Esse será o combustível e o agente motivador dessa vitória.`,
-      autor: 'Ph.D Reinaldo Domingos'
     })
   }
   else if(pontuacao >= 46 && pontuacao <= 75){
     return ({
       perfil: 'Equilibrado',
       descricao: `Você certamente está achando que essa situação é favorável à sua vida financeira, porém afirmo que não é. Como Ph.D em Educação Financeira, entendo que essa situação é a mais grave de todas. Desculpe a franqueza! Vamos começar a entender melhor o porque estar equilibrado financeiramente é uma situação não muito agradável. Pense na resposta da seguinte pergunta: "Se a partir de hoje você não mais recebesse seu ganho mensal, por quanto tempo manteria seu atual padrão de vida?" Ela já o coloca com a falta de sustentabilidade financeira e com isso o faz ficar vulnerável aos intemperes da vida, o que denota uma ausência de educação financeira. Certamente você já ouviu essa frase: "Não importa o quanto você ganha, mas sim o quanto você gasta", por isso convido você e sua família a conhecerem, aprenderem e praticarem a Educação Financeira pela Metodologia DSOP, a qual sou mentor.`,
-      autor: 'Ph.D Reinaldo Domingos'
     })
   }
   else{
@@ -290,7 +290,6 @@ function perfil(pontuacao){
 			avaliação dos sonhos a serem alcançados, distribuindo-os em curto (até 1 ano), médio (de 1 a 10 anos) 
 			e longo (acima de 10 anos) prazo. Também é importante envolver a família nesse propósito, fazendo com
 			que ela descubra seus verdadeiros sonhos, tanto individuais quanto coletivos.`,
-      autor: 'Ph.D Reinaldo Domingos'
     })
   }
 }

@@ -27,10 +27,20 @@ export const Resultado = () => {
         <article className={styleResultado.sectionResultado__articlePerfil}>
           <div className={styleResultado.sectionResultado__articlePerfil__divflex}>
             <h1><span>Perfil</span><br/>{resultadoPerfil.perfil}</h1>
-            <p>
-              {resultadoPerfil.descricao}<br/>
-              <strong>{resultadoPerfil.autor}</strong>
-            </p>
+            <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+              {resultadoPerfil.descricao.map((desc, i) => (
+                <p key={i} >
+                  {desc}
+                </p>
+              ))}
+
+              {resultadoPerfil.links.map((desc, i) => (
+                <a key={i} style={{display: 'inline-block'}}>
+                  {desc}
+                </a>
+              ))}
+
+            </div>
           </div>
         </article>
 
