@@ -6,7 +6,7 @@ const ButtonToTop = () => {
    
    React.useEffect(() => {
       function handleScroll(){
-         if(window.scrollY >= 800){
+         if(window.scrollY >= 400){
             setVisivel(true);
          }
          else{

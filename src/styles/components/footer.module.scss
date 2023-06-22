@@ -42,11 +42,12 @@
       }
       @include tablet{
          padding: 60px 24px 180px 24px;
-         background-position: left bottom;
+         background-position: 60px bottom;
       }
       @include mobile{
          padding: 20px 24px 180px 24px;
          background-size: contain;
+         background-position: 10px bottom;
       }
    }
 

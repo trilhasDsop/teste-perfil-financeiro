@@ -73,6 +73,7 @@
 
 .section1__home{
    padding: 130px 48px 40px 48px;
+   position: relative;
    @include tablet{
       padding: 60px 24px;
    }
@@ -81,6 +82,7 @@
 .section1__homecontainer{
    max-width: 890px;
    margin: 0 auto;
+   position: relative;
    display: flex;
    flex-direction: column;
    gap: 50px;

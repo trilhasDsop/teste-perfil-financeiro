@@ -3,6 +3,7 @@
 
 .sectionResultado__container{
    max-width: 938px;
+   max-width: 1000px;
    margin: 0 auto;
    padding: 0 48px;
 
@@ -13,11 +14,22 @@
 
 .sectionResultado__articlePerfil{
    margin: 100px 0;
+
+
+   @include tablet{
+      margin-top: 60px;
+   }
    
    .sectionResultado__articlePerfil__divflex{
       display: flex;
       align-items: center;
       gap: 42px;
+
+      @include tablet{
+         gap: 32px;
+         align-items: flex-start;
+         flex-direction: column;
+      }
 
       .sectionResultado__divflex{
          display: flex;
@@ -28,12 +40,16 @@
       h1{
          position: relative;
          font-family: 'Gilroy-bold', sans-serif;
-         font-size: 50px;
+         font-size: 3.125rem;
          line-height: 60px;
          color: $cor-verde;
 
+         @include tablet{
+            font-size: 2.5rem;
+         }
+
          span{
-            font-size: 30px;
+            font-size: 1.875rem;
             line-height: 36px;
          }
 
@@ -46,12 +62,19 @@
             right: -21px;
             display: block;
             background-color: $cor-cinza;
+
+            @include tablet{
+               width: 100%;
+               height: 2px;
+               top: calc(100% + 11px);
+               right: 0px;
+            }
          }
       }
 
       p{
          font-family: 'Gilroy-medium', sans-serif;
-         font-size: 16px;
+         font-size: 1rem;
          line-height: 146.54%;
          color: $cor-branco-2;
 
@@ -92,6 +115,14 @@
          font-size: 1.5625rem;
          line-height: 35px;
          color: $cor-branco-1;
+         @include tablet{
+            font-size: 1.375rem;
+            line-height: 30.8px;
+         }
+         @include mobile{
+            font-size: 1.25rem;
+            line-height: 30px;
+         }
       }
    }
 
@@ -108,7 +139,10 @@
       line-height: 22.4px;
       border: 1px solid $cor-verde;
       border-radius: 10px;
-
+      @include tablet{
+         padding: 19px;
+         line-height: 22.4px;
+      }
       span{
          font-family: 'Gilroy-bold', sans-serif;
          font-size: 1.5625rem;

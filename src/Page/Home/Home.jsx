@@ -7,6 +7,7 @@ import { Titulo } from '../../Components/Titulo/Titulo';
 import { useNavigate } from 'react-router-dom';
 import { DataContext } from '../../Context/dataContext';
 import Snackbar from '../../Components/Snackbar/Snackbar';
+import Wizard from '../../Components/Wizard/Wizard';
  
 export const Home = () => {
   const navigate = useNavigate();
@@ -18,7 +19,6 @@ export const Home = () => {
   } = React.useContext(DataContext);
   const [snackbar, setSnackBar] = React.useState(false);
   const [pontos, setPontos] = React.useState({});
-  
   function handleChange(questao, alternativa, id){
     setRespostas({...respostas, [id]: [id, questao, alternativa]})
     setPontos({...pontos, [id]: alternativa.pontos})
@@ -40,8 +40,6 @@ export const Home = () => {
     }
   }
 
-  console.log(respostas)
-
   return (
     <>
       <main className={styleHome.main__home}>
@@ -61,21 +59,23 @@ export const Home = () => {
         <Titulo>Inicie seu questionário</Titulo>
 
         <form className={styleHome.section1__homecontainer}>
-            {questoes?.map((q) => (
-              <Radio 
-                key={q.id}
-                valor={respostas[q.id][2]?.texto}
-                onchange={handleChange}
-                {...q}
-              />
-            ))}
+          {questoes?.map((q) => (
+            <Radio 
+              key={q.id}
+              valor={respostas[q.id][2]?.texto}
+              onchange={handleChange}
+              {...q}
+            />
+          ))}
 
-            <div className={styleHome.section1__home__divbutton}>
-              <a href="/">Resetar</a>
-              <button onClick={handleClick}>Enviar</button>
-            </div>
+          <div className={styleHome.section1__home__divbutton}>
+            <a href="/">Resetar</a>
+            <button onClick={handleClick}>Enviar</button>
+          </div>
         </form>
       </section>
+
+      <Wizard positionTop={400} />     
 
       {snackbar && (<Snackbar ativarSnackar={setSnackBar} />)}
 

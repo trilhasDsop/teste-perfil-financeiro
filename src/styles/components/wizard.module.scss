@@ -1,0 +1,91 @@
+.wizard{
+   position: fixed;
+   right: 120px;
+   z-index: 100;
+
+   .wizard__container{
+      display: flex;
+      flex-direction: column;
+      gap: 90px;
+   }
+
+   .wizard__wizarditem{
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid #7D7D7D;
+   }
+
+   .wizard__wizarditem:nth-child(2){
+      position: relative;
+
+      &::before{
+         content: '';
+         width: 2px;
+         height: 91px;
+         position: absolute;
+         top: -92px;
+         display: block;
+         background-color: #7D7D7D;
+      }
+
+      &::after{
+         content: '';
+         width: 2px;
+         height: 46px;
+         position: absolute;
+         bottom: -47px;
+         display: block;
+         background-color: #7D7D7D;
+      }
+   }
+
+   .wizard__wizarditem:nth-child(3){
+      position: relative;
+      &::before{
+         content: '';
+         width: 2px;
+         height: 48px;
+         position: absolute;
+         top: -49px;
+         display: block;
+         background-color: #7D7D7D;
+      }
+   }
+
+   .wizard__wizarditem:global(.active){
+      svg{
+         filter: invert(72%) sepia(55%) saturate(4241%) hue-rotate(70deg) brightness(114%) contrast(135%);
+      }
+      cursor: pointer;
+      border: 2px solid #12FF00;
+   }
+
+   .wizard__wizarditem:nth-child(2):global(.active){
+      border: 2px solid #12FF00;
+      svg{
+         filter: invert(72%) sepia(55%) saturate(4241%) hue-rotate(70deg) brightness(114%) contrast(135%);
+      }
+      &::before{
+         background-color: #12FF00;
+      }
+
+      &::after{
+         background-color: #12FF00;
+      }
+   }
+
+   .wizard__wizarditem:nth-child(3):global(.active){
+      border: 2px solid #12FF00;
+      svg{
+         filter: invert(72%) sepia(55%) saturate(4241%) hue-rotate(70deg) brightness(114%) contrast(135%);
+      }
+      &::before{
+         background-color: #12FF00;
+      }
+   }
+}

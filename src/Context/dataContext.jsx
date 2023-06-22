@@ -201,11 +201,7 @@ function perfil(pontuacao){
   if(pontuacao >= 0 && pontuacao <= 15){
     return ({
       perfil: 'Superendividado',
-      descricao: [
-        'Quando passamos a pegar crédito nos bancos, acabamos caindo no ciclo do endividamento ao nos depararmos com os juros e nossa falta de educação financeira. Não podemos criticar as formas de crédito, pois quando bem utilizadas, se tornam grandes aliadas.',
-        'A orientação é, antes de mais nada, manter a calma. Lembre-se: estando inadimplente, com nome sujo, negativado ou não, o caminho é sempre para a frente. Seguir uma metodologia de educação financeira, como a DSOP, que te eduque como seguir nessa situação, é o ideal. Acredite que você pode assumir as rédeas da sua vida financeira!',
-        'Para te ajudar na sua caminhada, te indicamos a playlist abaixo:',
-      ],
+      descricao: `O uso do crédito bancário pode levar ao endividamento devido aos juros e à falta de educação financeira. No entanto, é importante reconhecer que o crédito pode ser útil se usado corretamente. Para lidar com essa situação, é essencial manter a calma e seguir uma metodologia de educação financeira, como a DSOP, que oferece orientações sobre como avançar mesmo em casos de inadimplência ou restrições de crédito. É possível assumir o controle da vida financeira e superar esses desafios.`,
       links__livro: [
         {
           'titulo': 'Terapia Financeira;',
@@ -227,14 +223,7 @@ function perfil(pontuacao){
   else if(pontuacao >= 16 && pontuacao <= 38){
     return ({
       perfil: 'Endividado',
-      descricao: [
-        `Acredite, estar endividado não é o fim do mundo! Esta situação traz a nós a necessidade de atitude, de mudança para melhor.
-        É importante envolver sua família imediata (aquela que mora com você ou que está diretamente ligada aos seus gastos) nesta missão e não querer resolver tudo sozinho. Família unida, jamais será vencida!
-        Uma das formas de se empoderar das suas finanças é praticar a Metodologia DSOP - diagnosticar, sonhar, orçar e poupar, que norteia todo o conteúdo DFLIX. A educação financeira começa com o os sonhos de todos os envolvidos, e ter propósitos claros - um deles, o de sair do endividamento.
-        `,
-        'Vamos juntos nessa?',
-        'Para te ajudar na sua caminhada, te indicamos a playlist abaixo:'
-      ],
+      descricao: `Estar endividado não é o fim do mundo. É preciso ter atitude e buscar mudanças positivas. Envolver a família nessa jornada é importante, pois uma família unida é mais forte. A Metodologia DSOP, que inclui diagnosticar, sonhar, orçar e poupar, é uma maneira de fortalecer o controle financeiro. A educação financeira começa com os sonhos de todos os envolvidos, incluindo o objetivo de sair do endividamento.`,
       links__livro: [
         {
           'titulo': 'Terapia Financeira;',
@@ -256,14 +245,7 @@ function perfil(pontuacao){
   else if(pontuacao >= 39 && pontuacao <= 61){
     return ({
       perfil: 'Equilibrado',
-      descricao: [
-        `Pode parecer favorável, mas pode ser uma armadilha! 
-        Não faz sentido? Então pense: "Se hoje você perdesse seu ganho mensal/salário, por quanto tempo você manteria seu padrão de vida atual?"
-        Caso sua resposta tenha girado em torno de dias ou poucos meses, já notamos a falta de sustentabilidade financeira, o que te deixa vulnerável a qualquer dificuldade ou surpresa não-agradável que surgir no seu caminho. Não importa o quanto você ganha, mas o quanto você gasta.
-        `,
-        `Os conteúdos da DFLIX seguem uma metodologia de educação financeira que trabalha nosso comportamento acerca do dinheiro, nos ensinando a ser independentes sem deixar nossos sonhos e objetivos mais queridos de lado. Vamos entender como lidar melhor com nosso dinheiro?`,
-        'Para te ajudar na sua caminhada, te indicamos a playlist abaixo:'
-      ],
+      descricao: `Estar equilibrado financeiramente pode parecer bom, mas pode ser uma armadilha. Sem sua renda mensal, por quanto tempo você manteria seu padrão de vida atual? Se for poucos meses, indica falta de sustentabilidade financeira. O importante não é o quanto ganhamos, mas o quanto gastamos.`,
       links__livro: [
         {
           'titulo': 'Terapia Financeira;',
@@ -285,13 +267,7 @@ function perfil(pontuacao){
   else{
     return ({
       perfil: 'Investidor',
-      descricao: [
-        `Sua pontuação mostra que você tem o perfil INVESTIDOR, ou seja, criou o hábito de poupar parte do que ganha. Isso significa que você está num bom caminho, já que investir é potencializar o dinheiro poupado.
-        Mas, você está "carimbando" este valor, separando seu dinheiro por tempo e destino (seus sonhos e objetivos)? É recomendável avaliar seus sonhos e separa-los em curto (até um ano), médio (de um à dez anos) e longo prazo (mais de dez anos). E lembre-se de envolver sua família neste processo e propósito, e descubram seus sonhos individuais e coletivos.
-        Você já está no caminho certo, agora pode se beneficiar da Metodologia DSOP, que norteia todos os conteúdos da DFLIX, e aprender a investir de forma sustentável.
-        `,
-        'Para saber como potencializar seus investimentos, te indicamos a playlist abaixo:'
-      ],
+      descricao: `Você já tem o hábito de poupar parte de sua renda, o que é um bom sinal. No entanto, é importante avaliar se você está direcionando esses valores para objetivos e sonhos específicos, com prazo de conclusão. É recomendável separa-los em sonhos de curto (ate 1 ano), médio entre 1 e 10 anos) e longo prazo (mais de 10 anos).`,
       links__livro: [
         {
           'titulo': 'Terapia Financeira.',

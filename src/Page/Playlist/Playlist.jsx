@@ -3,6 +3,7 @@ import stylePlaylist from '../../styles/page/playlist.module.scss';
 import { Titulo } from '../../Components/Titulo/Titulo';
 import { DataContext } from '../../Context/dataContext';
 import { Footer } from '../../Layout/Footer/Footer';
+import Wizard from '../../Components/Wizard/Wizard';
 
 export const Playlist = () => {
   const { resultadoPerfil, filterPlaylist} = React.useContext(DataContext);
@@ -31,7 +32,7 @@ export const Playlist = () => {
           </div>
         </article>
       </section>
-      
+      <Wizard positionTop={400} />
       <Footer />
     </>
   )

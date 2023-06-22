@@ -60,6 +60,7 @@ body{
       filter: blur(125px);
       z-index: -1;
    }
+
    &::after{
       content: '';
       position: absolute;

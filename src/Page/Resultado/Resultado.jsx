@@ -6,6 +6,7 @@ import { Titulo } from '../../Components/Titulo/Titulo';
 import { DataContext } from '../../Context/dataContext';
 import { useNavigate } from 'react-router-dom';
 import { Footer } from '../../Layout/Footer/Footer';
+import Wizard from '../../Components/Wizard/Wizard';
 
 export const Resultado = () => {
   const navigator = useNavigate();
@@ -21,8 +22,6 @@ export const Resultado = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  console.log(resultadoPerfil.links__livro.map((x) => x.titulo))
-
   return (
     <>
       <section className={styleResultado.sectionResultado__container}>
@@ -30,12 +29,10 @@ export const Resultado = () => {
           <div className={styleResultado.sectionResultado__articlePerfil__divflex}>
             <h1><span>Perfil</span><br/>{resultadoPerfil.perfil}</h1>
             <div className={styleResultado.sectionResultado__divflex}>
-              {resultadoPerfil.descricao.map((desc, i) => (
-                <p key={i} >
-                  {desc}
-                </p>
-              ))}
+              <p>{resultadoPerfil.descricao}</p>
+              {/* 
               <p>Outros materiais que podem te ajudar:</p>
+
               <div className={styleResultado.div1}>
                 <p>Livro:</p>
                 {resultadoPerfil.links__livro.map((desc, i) => (
@@ -58,8 +55,7 @@ export const Resultado = () => {
                     {desc.titulo}
                   </a>
                 ))}
-              </div>
-
+              </div> */}
             </div>
           </div>
         </article>
@@ -94,7 +90,7 @@ export const Resultado = () => {
           </div>
         </article>
       </section>
-      
+      <Wizard positionTop={400} />
       <Footer />
     </>
   )
