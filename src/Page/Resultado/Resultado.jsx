@@ -21,24 +21,44 @@ export const Resultado = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  console.log(resultadoPerfil.links__livro.map((x) => x.titulo))
+
   return (
     <>
       <section className={styleResultado.sectionResultado__container}>
         <article className={styleResultado.sectionResultado__articlePerfil}>
           <div className={styleResultado.sectionResultado__articlePerfil__divflex}>
             <h1><span>Perfil</span><br/>{resultadoPerfil.perfil}</h1>
-            <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+            <div className={styleResultado.sectionResultado__divflex}>
               {resultadoPerfil.descricao.map((desc, i) => (
                 <p key={i} >
                   {desc}
                 </p>
               ))}
-
-              {resultadoPerfil.links.map((desc, i) => (
-                <a key={i} style={{display: 'inline-block'}}>
-                  {desc}
-                </a>
-              ))}
+              <p>Outros materiais que podem te ajudar:</p>
+              <div className={styleResultado.div1}>
+                <p>Livro:</p>
+                {resultadoPerfil.links__livro.map((desc, i) => (
+                  <a 
+                    key={i} target='_blank' href={desc.link} 
+                    style={{display: 'inline-block'}}
+                  >
+                    {desc.titulo}
+                  </a>
+                ))}
+              </div>
+              
+              <div className={styleResultado.div2}>
+                <p>Extra:</p>
+                {resultadoPerfil.links__outro.map((desc, i) => (
+                  <a 
+                    key={i} target='_blank' href={desc.link} 
+                    style={{display: 'inline-block'}}
+                  >
+                    {desc.titulo}
+                  </a>
+                ))}
+              </div>
 
             </div>
           </div>

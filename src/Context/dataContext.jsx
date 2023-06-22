@@ -250,46 +250,108 @@ function perfil(pontuacao){
     return ({
       perfil: 'Superendividado',
       descricao: [
-        'Quando passamos a pegar crédito nos bancos, acabamos caindo no ciclo do endividamento ao nos depararmos com os juros e nossa falta de educação financeira.',
-        'Não podemos criticar as formas de crédito, pois quando bem utilizadas, se tornam grandes aliadas.',
+        'Quando passamos a pegar crédito nos bancos, acabamos caindo no ciclo do endividamento ao nos depararmos com os juros e nossa falta de educação financeira. Não podemos criticar as formas de crédito, pois quando bem utilizadas, se tornam grandes aliadas.',
         'A orientação é, antes de mais nada, manter a calma. Lembre-se: estando inadimplente, com nome sujo, negativado ou não, o caminho é sempre para a frente. Seguir uma metodologia de educação financeira, como a DSOP, que te eduque como seguir nessa situação, é o ideal. Acredite que você pode assumir as rédeas da sua vida financeira!',
         'Para te ajudar na sua caminhada, te indicamos a playlist abaixo:',
-        ''
       ],
-      links: [
-        'Terapia Financeira;',
-        'Nome sujo pode ser a solução'
+      links__livro: [
+        {
+          'titulo': 'Terapia Financeira;',
+          'link': 'https://www.lojadsop.com.br/educacao-financeira/terapia-financeira-2-ed'  
+        },
+        {
+          'titulo': 'Nome sujo pode ser a solução.',
+          'link': 'https://www.lojadsop.com.br/phd-reinaldo-domingos/nome-sujo-pode-ser-a-solucao-dsop'
+        }
       ],
+      links__outro: [
+        {
+          'titulo': 'Dinheiro À Vista',
+          'link': 'https://www.youtube.com/@Dinheiroavista' 
+        }
+      ]
     })
   }
   else if(pontuacao >= 16 && pontuacao <= 45){
     return ({
       perfil: 'Endividado',
-      descricao: `Sua pontuação mostra que sua situação financeira pode ser endividado. Independentemente, é possível mudar de vez essa situação. 
-			Ao longo de minha vida como educador e terapeuta financeiro já presenciei diversas situações parecidas com a sua, e acredite, todas elas conseguiram se reerguer muito rapidamente, aplicando a Metodologia DSOP de Educação Financeira, a qual eu sou o Mentor. Para tanto, é preciso acreditar no seu “Eu”, no seu “Ser”, e saber que, com muita perseverança, poderá mudar essa condição de endividado para até mesmo se tornar um investidor. É possível que ao
-			longo de sua vida os seus hábitos financeiros sempre colocaram os gastos em primeiro lugar, ou seja, o dinheiro que passou pelas suas mãos teve seu destino priorizando o consumo, mas não se culpe, isso aconteceu também com nossos antepassados, que em nenhum momento aprenderam Educação Financeira. Também algo que ficou marcado nessa minha trajetória é que estar nessa situação de endividamento, muitas vezes é melhor do que estar numa situação de equilíbrio financeiro. Acredito nisso porque o estado de endividamento já provoca uma necessidade de atitude, de não mais permanecer nessa situação. Então, nada de perder mais tempo do que já perdeu, a hora chegou! Vamos virar esse jogo, estou com você, e vamos imediatamente envolver sua família nisso, não queira resolver tudo sozinho, já que a família unida jamais será vencida. E me coloco também nessa nova família. Praticar os 4 passos da Metodologia DSOP (Diagnosticar, Sonhar, Orçar e Poupar) fará com que você se empodere, que você renasça para a vida e o que mais vai fazer com que você tenha êxito serão os resgates de seus sonhos e propósitos, entre estes, o de sair dessa situação de endividamento, mas lembre-se que esse não pode ser o único, pois todos de sua família, inclusive você, precisam sonhar.
-			Esse será o combustível e o agente motivador dessa vitória.`,
+      descricao: [
+        `Acredite, estar endividado não é o fim do mundo! Esta situação traz a nós a necessidade de atitude, de mudança para melhor.
+        É importante envolver sua família imediata (aquela que mora com você ou que está diretamente ligada aos seus gastos) nesta missão e não querer resolver tudo sozinho. Família unida, jamais será vencida!
+        Uma das formas de se empoderar das suas finanças é praticar a Metodologia DSOP - diagnosticar, sonhar, orçar e poupar, que norteia todo o conteúdo DFLIX. A educação financeira começa com o os sonhos de todos os envolvidos, e ter propósitos claros - um deles, o de sair do endividamento.
+        `,
+        'Vamos juntos nessa?',
+        'Para te ajudar na sua caminhada, te indicamos a playlist abaixo:'
+      ],
+      links__livro: [
+        {
+          'titulo': 'Terapia Financeira;',
+          'link': 'https://www.lojadsop.com.br/educacao-financeira/terapia-financeira-2-ed'  
+        },
+        {
+          'titulo': 'Nome sujo pode ser a solução.',
+          'link': 'https://www.lojadsop.com.br/phd-reinaldo-domingos/nome-sujo-pode-ser-a-solucao-dsop'
+        }
+      ],
+      links__outro: [
+        {
+          'titulo': 'Dinheiro À Vista',
+          'link': 'https://www.youtube.com/@Dinheiroavista' 
+        }
+      ]
     })
   }
   else if(pontuacao >= 46 && pontuacao <= 75){
     return ({
       perfil: 'Equilibrado',
-      descricao: `Você certamente está achando que essa situação é favorável à sua vida financeira, porém afirmo que não é. Como Ph.D em Educação Financeira, entendo que essa situação é a mais grave de todas. Desculpe a franqueza! Vamos começar a entender melhor o porque estar equilibrado financeiramente é uma situação não muito agradável. Pense na resposta da seguinte pergunta: "Se a partir de hoje você não mais recebesse seu ganho mensal, por quanto tempo manteria seu atual padrão de vida?" Ela já o coloca com a falta de sustentabilidade financeira e com isso o faz ficar vulnerável aos intemperes da vida, o que denota uma ausência de educação financeira. Certamente você já ouviu essa frase: "Não importa o quanto você ganha, mas sim o quanto você gasta", por isso convido você e sua família a conhecerem, aprenderem e praticarem a Educação Financeira pela Metodologia DSOP, a qual sou mentor.`,
+      descricao: [
+        `Pode parecer favorável, mas pode ser uma armadilha! 
+        Não faz sentido? Então pense: "Se hoje você perdesse seu ganho mensal/salário, por quanto tempo você manteria seu padrão de vida atual?"
+        Caso sua resposta tenha girado em torno de dias ou poucos meses, já notamos a falta de sustentabilidade financeira, o que te deixa vulnerável a qualquer dificuldade ou surpresa não-agradável que surgir no seu caminho. Não importa o quanto você ganha, mas o quanto você gasta.
+        `,
+        `Os conteúdos da DFLIX seguem uma metodologia de educação financeira que trabalha nosso comportamento acerca do dinheiro, nos ensinando a ser independentes sem deixar nossos sonhos e objetivos mais queridos de lado. Vamos entender como lidar melhor com nosso dinheiro?`,
+        'Para te ajudar na sua caminhada, te indicamos a playlist abaixo:'
+      ],
+      links__livro: [
+        {
+          'titulo': 'Terapia Financeira;',
+          'link': 'https://www.lojadsop.com.br/educacao-financeira/terapia-financeira-2-ed'  
+        },
+        {
+          'titulo': 'Nome sujo pode ser a solução.',
+          'link': 'https://www.lojadsop.com.br/phd-reinaldo-domingos/nome-sujo-pode-ser-a-solucao-dsop'
+        }
+      ],
+      links__outro: [
+        {
+          'titulo': 'Dinheiro À Vista',
+          'link': 'https://www.youtube.com/@Dinheiroavista' 
+        }
+      ]
     })
   }
   else{
     return ({
       perfil: 'Investidor',
-      descricao: `Investir é potencializar o dinheiro poupado. 
-			Isso significa que você está num bom caminho, porque poupar vai muito além de investir e aplicando a Metodologia
-			DSOP de Educação Financeira, a qual sou mentor, você conseguirá poupar com muito mais sustentabilidade
-			financeira.Sua pontuação mostra que você tem um perfil investidor, ou seja, criou o hábito de poupar 
-			parte do que ganha. Agora é preciso saber se você está carimbando esse dinheiro a ser investido, já
-			que grande parte das pessoas não fazem isso e apenas guardam por guardar. E você, o que está fazendo
-			com esse recurso? Esse dinheiro está devidamente separado por tempo e destino? Recomendo que faça uma
-			avaliação dos sonhos a serem alcançados, distribuindo-os em curto (até 1 ano), médio (de 1 a 10 anos) 
-			e longo (acima de 10 anos) prazo. Também é importante envolver a família nesse propósito, fazendo com
-			que ela descubra seus verdadeiros sonhos, tanto individuais quanto coletivos.`,
+      descricao: [
+        `Sua pontuação mostra que você tem o perfil INVESTIDOR, ou seja, criou o hábito de poupar parte do que ganha. Isso significa que você está num bom caminho, já que investir é potencializar o dinheiro poupado.
+        Mas, você está "carimbando" este valor, separando seu dinheiro por tempo e destino (seus sonhos e objetivos)? É recomendável avaliar seus sonhos e separa-los em curto (até um ano), médio (de um à dez anos) e longo prazo (mais de dez anos). E lembre-se de envolver sua família neste processo e propósito, e descubram seus sonhos individuais e coletivos.
+        Você já está no caminho certo, agora pode se beneficiar da Metodologia DSOP, que norteia todos os conteúdos da DFLIX, e aprender a investir de forma sustentável.
+        `,
+        'Para saber como potencializar seus investimentos, te indicamos a playlist abaixo:'
+      ],
+      links__livro: [
+        {
+          'titulo': 'Terapia Financeira.',
+          'link': 'https://www.lojadsop.com.br/educacao-financeira/terapia-financeira-2-ed'  
+        }
+      ],
+      links__outro: [
+        {
+          'titulo': 'DSOP',
+          'link': 'https://www.dsop.com.br/'
+        }
+      ]
     })
   }
 }
