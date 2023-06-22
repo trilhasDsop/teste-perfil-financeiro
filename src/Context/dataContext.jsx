@@ -101,46 +101,22 @@ const questoes = [
   },
   {
     'id': 'p5',
-    'questao': 'Como você planeja a sua aposentadoria?',
-    'alternativas': [
-      {
-        'id': 'p5A',
-        'letra': 'A',
-        'texto': 'Tenho planos alternativos de previdência privada para garantir a minha segurança financeira.',
-        'pontos': 10 
-      },
-      {
-        'id': 'p5B',
-        'letra': 'B',
-        'texto': 'Não contribuo para a previdência social e nem para a privada.',
-        'pontos': 0 
-      },
-      {
-        'id': 'p5C',
-        'letra': 'C',
-        'texto': 'Contribuo para a previdência social. Sei que preciso de reserva extra, mas não consigo poupar.',
-        'pontos': 5 
-      }
-    ]
-  },
-  {
-    'id': 'p6',
     'questao': 'O que você entende sobre ser Independente Financeiramente?',
     'alternativas': [
       {
-        'id': 'p6A',
+        'id': 'p5A',
         'letra': 'A',
         'texto': 'Que posso trabalhar por prazer e não por necessidade.',
         'pontos': 10 
       },
       {
-        'id': 'p6B',
+        'id': 'p5B',
         'letra': 'B',
         'texto': 'Que posso curtir a vida intensamente e não pensar no futuro.',
         'pontos': 0 
       },
       {
-        'id': 'p6C',
+        'id': 'p5C',
         'letra': 'C',
         'texto': 'Que posso ter dinheiro para viver bem o dia a dia.',
         'pontos': 5 
@@ -148,47 +124,23 @@ const questoes = [
     ]
   },
   {
-    'id': 'p7',
-    'questao': 'Você sabe quais são seus sonhos e objetivos de curto, médio e longo prazos?',
-    'alternativas': [
-      {
-        'id': 'p7A',
-        'letra': 'A',
-        'texto': 'Sei quais são, quanto custam e por quanto tempo terei que guardar para realizá-los.',
-        'pontos': 10 
-      },
-      {
-        'id': 'p7B',
-        'letra': 'B',
-        'texto': 'Tenho muitos sonhos e sei quanto custam, mas não sei como realizá-los.',
-        'pontos': 5 
-      },
-      {
-        'id': 'p7C',
-        'letra': 'C',
-        'texto': 'Não tenho sonhos ou, se tenho, sempre acabo deixando-os para o futuro, porque não consigo guardar dinheiro para eles.',
-        'pontos': 0
-      }
-    ]
-  },
-  {
-    'id': 'p8',
+    'id': 'p6',
     'questao': 'Se um imprevisto alterasse a sua situação financeira, qual seria a sua reação?',
     'alternativas': [
       {
-        'id': 'p8A',
+        'id': 'p6A',
         'letra': 'A',
         'texto': 'Não saberia por onde começar e teria medo de encarar a minha verdadeira situação financeira.',
         'pontos': 0
       },
       {
-        'id': 'p8B',
+        'id': 'p6B',
         'letra': 'B',
         'texto': 'Cortaria despesas e gastos desnecessários.',
         'pontos': 5 
       },
       {
-        'id': 'p8C',
+        'id': 'p6C',
         'letra': 'C',
         'texto': 'Faria um bom diagnóstico financeiro, registrando o que ganho e o que gasto, além dos meus investimentos e dívidas, se os tiverem.',
         'pontos': 10 
@@ -196,23 +148,23 @@ const questoes = [
     ]
   },
   {
-    'id': 'p9',
+    'id': 'p7',
     'questao': 'Se a partir de hoje você não recebesse mais seu ganho, por quanto tempo você conseguiria manter seu atual padrão de vida?',
     'alternativas': [
       {
-        'id': 'p9A',
+        'id': 'p7A',
         'letra': 'A',
         'texto': 'Não conseguiria me manter nem por alguns meses.',
         'pontos': 0
       },
       {
-        'id': 'p9B',
+        'id': 'p7B',
         'letra': 'B',
         'texto': 'Manteria meu padrão de vida por 1, no máximo, 4 anos.',
         'pontos': 5 
       },
       {
-        'id': 'p9C',
+        'id': 'p7C',
         'letra': 'C',
         'texto': 'Conseguiria fazer tudo que faço por 5, 10 ou mais anos.',
         'pontos': 10 
@@ -220,23 +172,23 @@ const questoes = [
     ]
   },
   {
-    'id': 'p10',
+    'id': 'p8',
     'questao': 'Quando você decide comprar um produto, qual é a sua atitude?',
     'alternativas': [
       {
-        'id': 'p10A',
+        'id': 'p8A',
         'letra': 'A',
         'texto': 'Planejo uma forma de investimento para comprar à vista e com desconto.',
         'pontos': 10 
       },
       {
-        'id': 'p10B',
+        'id': 'p8B',
         'letra': 'B',
         'texto': 'Parcelo dentro do meu orçamento.',
         'pontos': 5 
       },
       {
-        'id': 'p10C',
+        'id': 'p8C',
         'letra': 'C',
         'texto': 'Compro e depois me preocupo como vou pagar.',
         'pontos': 0
@@ -272,7 +224,7 @@ function perfil(pontuacao){
       ]
     })
   }
-  else if(pontuacao >= 16 && pontuacao <= 45){
+  else if(pontuacao >= 16 && pontuacao <= 38){
     return ({
       perfil: 'Endividado',
       descricao: [
@@ -301,7 +253,7 @@ function perfil(pontuacao){
       ]
     })
   }
-  else if(pontuacao >= 46 && pontuacao <= 75){
+  else if(pontuacao >= 39 && pontuacao <= 61){
     return ({
       perfil: 'Equilibrado',
       descricao: [
@@ -557,8 +509,6 @@ const User = ({children}) => {
     p6: '',
     p7: '',
     p8: '',
-    p9: '',
-    p10: ''
   });
   const [resultado, setResultado] = React.useState(null);
   const resultadoPerfil = perfil(resultado);

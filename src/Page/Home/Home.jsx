@@ -27,7 +27,7 @@ export const Home = () => {
   function handleClick(e){
     e.preventDefault();
 
-    if(respostas.p1 && respostas.p2 && respostas.p3 && respostas.p4 && respostas.p5 && respostas.p6 && respostas.p7 && respostas.p8 && respostas.p9 && respostas.p10){
+    if(respostas.p1 && respostas.p2 && respostas.p3 && respostas.p4 && respostas.p5 && respostas.p6 && respostas.p7 && respostas.p8){
       const pontuacao = Object.values(pontos).reduce((acc, atual) => acc+atual); 
       setResultado(pontuacao);
 
