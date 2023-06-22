@@ -1,20 +1,24 @@
 @import '../abstract/color.module.scss';
+@import '../abstract/mediaqueries.module.scss';
 
 .container__buttontop{
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: 80px;
-  bottom: 100px;
-  background-color: $cor-verde;
-  text-align: center;
-  border-radius: 50%;
-  transition: .2s;
-  cursor: pointer;
-
+   width: 48px;
+   height: 48px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   right: 80px;
+   bottom: 100px;
+   background-color: $cor-verde;
+   text-align: center;
+   border-radius: 50%;
+   transition: .2s;
+   cursor: pointer;
+   @include laptop{
+      right: 24px;
+      bottom: 40px;
+   }
    svg{
       pointer-events: none;
    }

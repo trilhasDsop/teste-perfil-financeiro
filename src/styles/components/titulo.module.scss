@@ -1,3 +1,5 @@
+@import '../abstract/mediaqueries.module.scss';
+
 .titulosection{
    margin-bottom: 50px;
    display: flex;
@@ -10,4 +12,8 @@
    line-height: 36px;
    text-align: center;
    color: #FFFFFF;
+   @include tablet{
+      font-size: 1.5625rem;
+      margin-bottom: 40px;
+   }
 }

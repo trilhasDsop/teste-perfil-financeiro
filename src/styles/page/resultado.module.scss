@@ -1,9 +1,14 @@
 @import '../abstract/color.module.scss';
+@import '../abstract/mediaqueries.module.scss';
 
 .sectionResultado__container{
    max-width: 938px;
    margin: 0 auto;
-   padding: 0 24px;
+   padding: 0 48px;
+
+   @include tablet{
+      padding: 0 24px;
+   }
 }
 
 .sectionResultado__articlePerfil{
@@ -99,9 +104,11 @@
 
    .sectionResultado__divplaylist{
       text-align: right;
-      
+      @include tablet{
+         text-align: center;
+      }
       button{
-         margin-top: 20px;
+         margin-top: 24px;
          font-family: 'Gilroy-bold', sans-serif;
          font-size: 1.25rem;
          line-height: 24px;
@@ -117,15 +124,38 @@
    display: grid;
    gap: 81px;
    grid-template-columns: repeat(3, 1fr);
+   grid-template-columns: repeat(
+      auto-fit, 
+      minmax(200px, 1fr)
+   );
+
+   @include small-laptop{
+      gap: 40px;
+   }
+   @include tablet{
+      grid-template-columns: repeat(
+         auto-fit, 
+         minmax(200px, 280px)
+      );
+      justify-content: center;
+   }
    
    .sectionResultado__gridlista__container{
+      display: flex;
+      flex-direction: column;
       background-color: #0E0E0E;
       border-radius: 16px;
       overflow: hidden;
    }
 
+   img{
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+   }
+
    p{
-      min-height: calc(100% - 310.61px);
+      height: 100%;
       padding: 13px 44px;
       display: flex;
       align-items: center;

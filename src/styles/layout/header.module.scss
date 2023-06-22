@@ -1,7 +1,11 @@
 @import '../Abstract/color.module.scss';
+@import '../abstract/mediaqueries.module.scss';
 
 .header__menu{
-   padding: 70px 24px 56px 24px; 
+   padding: 70px 48px 56px 48px; 
+   @include tablet{
+      padding: 56px 24px;   
+   }
 }
 
 .header__menu__nav{
@@ -12,7 +16,10 @@
    gap: 48px;
    justify-content: space-between;
    align-items: center;
-
+   @include mobile{
+      justify-content: center;
+      gap: 40px;
+   }
    .header__menu__logo{
       flex-shrink: 0;
    }
@@ -23,9 +30,12 @@
    z-index: 100;
    display: flex;
    align-items: center;
+   flex-wrap: wrap;
    gap: 16px;
    font-size: 1.25rem;
-
+   @include mobile{
+      justify-content: center;
+   }
    li:first-child{
       font-family: 'Gilroy-semibold', sans-serif;
       a{
@@ -39,11 +49,12 @@
       background-color: $cor-verde;
       border-radius: 44px;
       font-family: 'Gilroy-bold', sans-serif;
-
+   
       a{
          padding: 10px 22px;
          display: block;
          color: $cor-preto-1;
+         text-align: center;
       }
    }
 }

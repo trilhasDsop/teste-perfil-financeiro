@@ -1,4 +1,5 @@
 @import '../abstract/color.module.scss';
+@import '../abstract/mediaqueries.module.scss';
 
 .sectionFooter{
    margin: 85px 0 130px 0;
@@ -36,16 +37,38 @@
       background-image: url('../../assets/img/img-laptop.png');
       background-repeat: no-repeat;
       background-position: right bottom;
+      @include small-laptop{
+         padding: 60px 0 180px 48px;
+      }
+      @include tablet{
+         padding: 60px 24px 180px 24px;
+         background-position: left bottom;
+      }
+      @include mobile{
+         padding: 20px 24px 180px 24px;
+         background-size: contain;
+      }
    }
 
    h1{
       max-width: 480px;
       margin-bottom: -87px;
       font-family: 'Gilroy-semibold', sans-serif;
-      font-size: 30px;
+      font-size: 1.875rem;
       line-height: 36px;
       color: $cor-branco-2;
-      
+      @include small-laptop{
+         margin-bottom: 120px;
+         text-align: center;
+      }
+      @include tablet{
+         max-width: 100%;
+         font-size: 1.5625rem;
+         line-height: 32px;
+      }
+      @include mobile{
+         margin-bottom: 50px;
+      }
       a{
          display: inline-block;
          font-family: 'Gilroy-bold', sans-serif;

@@ -1,10 +1,13 @@
 @import '../abstract/color.module.scss';
+@import '../abstract/mediaqueries.module.scss';
 
 .playList__container{
    max-width: 938px;
    margin: 0 auto;
-   padding: 0 24px;
-
+   padding: 0 48px;
+   @include tablet{
+      padding: 0 24px;
+   }
    .playList__articlelist{
       margin: 100px 0 85px 0;
       display: flex;
@@ -14,20 +17,38 @@
    .articlelist__gridlista{
       display: grid;
       gap: 81px;
-      grid-template-columns: repeat(3, 1fr);
       grid-template-columns: repeat(
          auto-fit, 
          minmax(200px, 1fr)
       );
 
+      @include small-laptop{
+         gap: 40px;
+      }
+      @include tablet{
+         grid-template-columns: repeat(
+            auto-fit, 
+            minmax(200px, 280px)
+         );
+         justify-content: center;
+      }
+
       .articlelist__gridlista__container{
+         display: flex;
+         flex-direction: column;
          background-color: #0E0E0E;
          border-radius: 16px;
          overflow: hidden;
       }
+
+      div img{
+         width: 100%;
+         object-fit: cover;
+         object-position: center;
+      }
    
       p{
-         min-height: calc(100% - 310.61px);
+         height: 100%;
          padding: 13px 44px;
          display: flex;
          align-items: center;
