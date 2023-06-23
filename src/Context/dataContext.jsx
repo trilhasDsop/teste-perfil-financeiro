@@ -284,8 +284,6 @@ function perfil(pontuacao){
   }
 }
 
-
-
 const User = ({children}) => {
   const [respostas, setRespostas] = React.useState({
     p1: '',
