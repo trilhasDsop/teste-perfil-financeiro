@@ -61,7 +61,7 @@ export const Resultado = () => {
         </article>
 
         <article className={styleResultado.sectionResultado__article3Container}>
-          <Titulo>A DFLIX recomenda a playlist: {resultadoPerfil.perfil}</Titulo>
+          <Titulo>A DFLIX recomenda a Playlist: {resultadoPerfil.perfil}</Titulo>
 
           <div className={styleResultado.sectionResultado__gridlista}>
             {playList[0].filter((p, i) => i < 3).map((list) => (
