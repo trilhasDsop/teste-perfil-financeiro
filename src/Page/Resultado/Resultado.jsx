@@ -60,21 +60,8 @@ export const Resultado = () => {
           </div>
         </article>
 
-        <article className={styleResultado.sectionResultado__article2Container}>
-          <Titulo>Seus resultados</Titulo>
-          
-          {questoes?.map((questao, i) => (
-            <article key={i} className={styleResultado.sectionResultado__article2resultado}>
-              <h2>{questao[1]}</h2>
-                <p className={styleResultado.sectionResultado__article2resultado__questao}>
-                  <span>{questao[2]?.letra}</span> {questao[2]?.texto}
-                </p>
-            </article>
-          ))}
-        </article>
-
         <article className={styleResultado.sectionResultado__article3Container}>
-          <Titulo>Seus resultados: {resultadoPerfil.perfil}</Titulo>
+          <Titulo>A DFLIX recomenda a playlist: {resultadoPerfil.perfil}</Titulo>
 
           <div className={styleResultado.sectionResultado__gridlista}>
             {playList[0].filter((p, i) => i < 3).map((list) => (
@@ -88,6 +75,19 @@ export const Resultado = () => {
           <div className={styleResultado.sectionResultado__divplaylist}>
             <button onClick={() => navigator('/playlist')}>Ver mais</button>
           </div>
+        </article>     
+
+        <article className={styleResultado.sectionResultado__article2Container}>
+          <Titulo>Seus resultados</Titulo>
+          
+          {questoes?.map((questao, i) => (
+            <article key={i} className={styleResultado.sectionResultado__article2resultado}>
+              <h2>{questao[1]}</h2>
+                <p className={styleResultado.sectionResultado__article2resultado__questao}>
+                  <span>{questao[2]?.letra}</span> {questao[2]?.texto}
+                </p>
+            </article>
+          ))}
         </article>
       </section>
       {/* <Wizard positionTop={400} /> */}
