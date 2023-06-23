@@ -61,4 +61,31 @@
          color: $cor-branco-2;
       }
    }
+
+   .playList__section2__article{
+      margin-top: 100px;
+
+      .playList__section2__divflex{
+         p{
+            margin-bottom: 8px;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            justify-content: center;
+            color: $cor-branco-2;
+            text-align: center;
+            font-size: 1.25rem;
+            font-family: 'Gilroy-bold', sans-serif;
+
+            @include tablet{
+               margin-bottom: 20px;
+               flex-direction: column;
+               gap: 10px;
+            }
+         }
+         a{
+            color: $cor-verde;
+         }
+      }
+   }
 }

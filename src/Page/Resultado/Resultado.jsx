@@ -30,32 +30,6 @@ export const Resultado = () => {
             <h1><span>Perfil</span><br/>{resultadoPerfil.perfil}</h1>
             <div className={styleResultado.sectionResultado__divflex}>
               <p>{resultadoPerfil.descricao}</p>
-              {/* 
-              <p>Outros materiais que podem te ajudar:</p>
-
-              <div className={styleResultado.div1}>
-                <p>Livro:</p>
-                {resultadoPerfil.links__livro.map((desc, i) => (
-                  <a 
-                    key={i} target='_blank' href={desc.link} 
-                    style={{display: 'inline-block'}}
-                  >
-                    {desc.titulo}
-                  </a>
-                ))}
-              </div>
-              
-              <div className={styleResultado.div2}>
-                <p>Extra:</p>
-                {resultadoPerfil.links__outro.map((desc, i) => (
-                  <a 
-                    key={i} target='_blank' href={desc.link} 
-                    style={{display: 'inline-block'}}
-                  >
-                    {desc.titulo}
-                  </a>
-                ))}
-              </div> */}
             </div>
           </div>
         </article>

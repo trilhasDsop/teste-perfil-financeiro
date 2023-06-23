@@ -202,84 +202,24 @@ function perfil(pontuacao){
     return ({
       perfil: 'Superendividado',
       descricao: `O uso do crédito bancário pode levar ao endividamento devido aos juros e à falta de educação financeira. No entanto, é importante reconhecer que o crédito pode ser útil se usado corretamente. Para lidar com essa situação, é essencial manter a calma e seguir uma metodologia de educação financeira, como a DSOP, que oferece orientações sobre como avançar mesmo em casos de inadimplência ou restrições de crédito. É possível assumir o controle da vida financeira e superar esses desafios.`,
-      links__livro: [
-        {
-          'titulo': 'Terapia Financeira;',
-          'link': 'https://www.lojadsop.com.br/educacao-financeira/terapia-financeira-2-ed'  
-        },
-        {
-          'titulo': 'Nome sujo pode ser a solução.',
-          'link': 'https://www.lojadsop.com.br/phd-reinaldo-domingos/nome-sujo-pode-ser-a-solucao-dsop'
-        }
-      ],
-      links__outro: [
-        {
-          'titulo': 'Dinheiro À Vista',
-          'link': 'https://www.youtube.com/@Dinheiroavista' 
-        }
-      ]
     })
   }
   else if(pontuacao >= 16 && pontuacao <= 38){
     return ({
       perfil: 'Endividado',
       descricao: `Estar endividado não é o fim do mundo. É preciso ter atitude e buscar mudanças positivas. Envolver a família nessa jornada é importante, pois uma família unida é mais forte. A Metodologia DSOP, que inclui diagnosticar, sonhar, orçar e poupar, é uma maneira de fortalecer o controle financeiro. A educação financeira começa com os sonhos de todos os envolvidos, incluindo o objetivo de sair do endividamento.`,
-      links__livro: [
-        {
-          'titulo': 'Terapia Financeira;',
-          'link': 'https://www.lojadsop.com.br/educacao-financeira/terapia-financeira-2-ed'  
-        },
-        {
-          'titulo': 'Nome sujo pode ser a solução.',
-          'link': 'https://www.lojadsop.com.br/phd-reinaldo-domingos/nome-sujo-pode-ser-a-solucao-dsop'
-        }
-      ],
-      links__outro: [
-        {
-          'titulo': 'Dinheiro À Vista',
-          'link': 'https://www.youtube.com/@Dinheiroavista' 
-        }
-      ]
     })
   }
   else if(pontuacao >= 39 && pontuacao <= 61){
     return ({
       perfil: 'Equilibrado',
       descricao: `Estar equilibrado financeiramente pode parecer bom, mas pode ser uma armadilha. Sem sua renda mensal, por quanto tempo você manteria seu padrão de vida atual? Se for poucos meses, indica falta de sustentabilidade financeira. O importante não é o quanto ganhamos, mas o quanto gastamos.`,
-      links__livro: [
-        {
-          'titulo': 'Terapia Financeira;',
-          'link': 'https://www.lojadsop.com.br/educacao-financeira/terapia-financeira-2-ed'  
-        },
-        {
-          'titulo': 'Nome sujo pode ser a solução.',
-          'link': 'https://www.lojadsop.com.br/phd-reinaldo-domingos/nome-sujo-pode-ser-a-solucao-dsop'
-        }
-      ],
-      links__outro: [
-        {
-          'titulo': 'Dinheiro À Vista',
-          'link': 'https://www.youtube.com/@Dinheiroavista' 
-        }
-      ]
     })
   }
   else{
     return ({
       perfil: 'Investidor',
       descricao: `Você já tem o hábito de poupar parte de sua renda, o que é um bom sinal. No entanto, é importante avaliar se você está direcionando esses valores para objetivos e sonhos específicos, com prazo de conclusão. É recomendável separa-los em sonhos de curto (ate 1 ano), médio entre 1 e 10 anos) e longo prazo (mais de 10 anos).`,
-      links__livro: [
-        {
-          'titulo': 'Terapia Financeira.',
-          'link': 'https://www.lojadsop.com.br/educacao-financeira/terapia-financeira-2-ed'  
-        }
-      ],
-      links__outro: [
-        {
-          'titulo': 'DSOP',
-          'link': 'https://www.dsop.com.br/'
-        }
-      ]
     })
   }
 }

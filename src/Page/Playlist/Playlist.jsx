@@ -32,6 +32,23 @@ export const Playlist = () => {
           </div>
         </article>
       </section>
+
+      <section className={stylePlaylist.playList__container}>
+        <article className={stylePlaylist.playList__section2__article}>
+          <Titulo>Outros materiais que podem te ajudar</Titulo>
+        
+          <div className={stylePlaylist.playList__section2__divflex}>
+            <p>Livro: 
+              <a href="https://www.lojadsop.com.br/educacao-financeira/terapia-financeira-2-ed" target='_blank'>Terapia Financeira;</a>
+              <a href="https://www.lojadsop.com.br/phd-reinaldo-domingos/nome-sujo-pode-ser-a-solucao-dsop" target='_blank'>Nome sujo pode ser a solução.</a>
+            </p>
+            <p>
+              YouTube: <a href="https://www.youtube.com/@Dinheiroavista" target='_blank'>Dinheiro À Vista</a>
+            </p>
+          </div>
+        </article>
+      </section>
+
       {/* <Wizard positionTop={400} /> */}
       <Footer />
     </>
