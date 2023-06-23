@@ -90,7 +90,7 @@ export const Resultado = () => {
           </div>
         </article>
       </section>
-      <Wizard positionTop={400} />
+      {/* <Wizard positionTop={400} /> */}
       <Footer />
     </>
   )

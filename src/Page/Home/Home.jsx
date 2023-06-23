@@ -75,7 +75,7 @@ export const Home = () => {
         </form>
       </section>
 
-      <Wizard positionTop={400} />     
+      {/* <Wizard positionTop={400} />      */}
 
       {snackbar && (<Snackbar ativarSnackar={setSnackBar} />)}
 
