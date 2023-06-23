@@ -283,7 +283,7 @@ function perfil(pontuacao){
     })
   }
 }
-
+//  ../assets/capas/Superendividado
 const playlistPerfil = [
   {
     perfil: 'Superendividado',
@@ -291,43 +291,43 @@ const playlistPerfil = [
       {
         id: 's1',
         nome: 'Eu mereço ter dinheiro',
-        url_foto: '/src/assets/capas/Superendividado/Eu mereço ter dinheiro.png',
+        url_foto: '../src/assets/capas/Superendividado/Eu mereço ter dinheiro.png',
         link_url: 'https://streaming.dflix.com.br/course/ec439d93-6d2c-45cc-99bd-9911661e4e8d'
       },
       {
         id: 's2',
         nome: 'Dinheiro na crise',
-        url_foto: '/src/assets/capas/Superendividado/Dinheiro na crise.png',
+        url_foto: '../src/assets/capas/Superendividado/Dinheiro na crise.png',
         link_url: 'https://streaming.dflix.com.br/course/80eb662b-cd18-4d41-acdf-680aad7643a7'
       },
       {
         id: 's3',
         nome: 'Ter dinheiro não tem segredo',
-        url_foto: '/src/assets/capas/Superendividado/Ter dinheiro não tem segredo.png',
+        url_foto: '../src/assets/capas/Superendividado/Ter dinheiro não tem segredo.png',
         link_url: 'https://streaming.dflix.com.br/course/590ebff2-1733-4206-8dfb-b0f02fff7388'
       },
       {
         id: 's4',
         nome: 'Formas de usar o crédito',
-        url_foto: '/src/assets/capas/Superendividado/Formas de usar o crédito.png',
+        url_foto: '../src/assets/capas/Superendividado/Formas de usar o crédito.png',
         link_url: 'https://streaming.dflix.com.br/course/27902b87-8763-4342-a5bf-f294b3ed5ffa'
       },
       {
         id: 's5',
         nome: 'Nome sujo pode ser a solução',
-        url_foto: '/src/assets/capas/Superendividado/Nome sujo pode ser a solução.png',
+        url_foto: '../src/assets/capas/Superendividado/Nome sujo pode ser a solução.png',
         link_url: 'https://streaming.dflix.com.br/course/07d989b7-1a4d-4b16-a099-e51d56d97fd4'
       },
       {
         id: 's6',
         nome: 'Defenda seu dinheiro',
-        url_foto: '/src/assets/capas/Superendividado/Defenda seu dinheiro.png',
+        url_foto: '../src/assets/capas/Superendividado/Defenda seu dinheiro.png',
         link_url: 'https://streaming.dflix.com.br/course/95d720ab-c24e-4688-9ac8-33ceb784e6e1'
       },
       {
         id: 's7',
         nome: 'Pague suas dívidas de forma definitiva',
-        url_foto: '/src/assets/capas/Superendividado/Pague suas dívidas de forma definitiva.png',
+        url_foto: '../src/assets/capas/Superendividado/Pague suas dívidas de forma definitiva.png',
         link_url: 'https://streaming.dflix.com.br/course/75833705-fe1b-4698-ba54-f66b97e00c25'
       },
     ]
@@ -426,7 +426,7 @@ const playlistPerfil = [
       }
     ]
   },
-  {
+      {
     perfil: 'Investidor',
     playlists: [
       {
