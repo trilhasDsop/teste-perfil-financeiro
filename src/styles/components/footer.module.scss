@@ -2,8 +2,11 @@
 @import '../abstract/mediaqueries.module.scss';
 
 .sectionFooter{
-   margin: 85px 0 130px 0;
+   padding: 85px 0 130px 0;
    position: relative;
+   background-image: url(../../assets/img/Ellipse-right-footer.svg);
+   background-repeat: no-repeat;
+   background-position: right bottom;
 
    &::before{
       content: '';
@@ -12,18 +15,6 @@
       height: 386px;
       left: -393px;
       top: -319px;
-      z-index: -1;
-      background-color: $cor-verde;
-      opacity: 0.19;
-      filter: blur(125px);
-   }
-   &::after{
-      content: '';
-      position: absolute;
-      width: 386px;
-      height: 386px;
-      left: 95%;
-      bottom: -119px;
       z-index: -1;
       background-color: $cor-verde;
       opacity: 0.19;
