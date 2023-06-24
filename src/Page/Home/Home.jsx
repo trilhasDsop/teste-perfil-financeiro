@@ -19,6 +19,7 @@ export const Home = () => {
   } = React.useContext(DataContext);
   const [snackbar, setSnackBar] = React.useState(false);
   const [pontos, setPontos] = React.useState({});
+ 
   function handleChange(questao, alternativa, id){
     setRespostas({...respostas, [id]: [id, questao, alternativa]})
     setPontos({...pontos, [id]: alternativa.pontos})
@@ -75,7 +76,7 @@ export const Home = () => {
         </form>
       </section>
 
-      {/* <Wizard positionTop={400} />      */}
+      <Wizard positionTop={400} snackBar={snackbar} setSnackBar={setSnackBar} />
 
       {snackbar && (<Snackbar ativarSnackar={setSnackBar} />)}
 
