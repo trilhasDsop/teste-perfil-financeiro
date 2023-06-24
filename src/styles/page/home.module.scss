@@ -123,6 +123,7 @@
    transition-property: transform;
    transition-duration: .2s;
    transition-timing-function: ease-in-out;
+   user-select: none;
    @include tablet{
       padding: 19px 19px 19px 0px;
       line-height: 22.4px;
@@ -138,6 +139,7 @@
       font-size: 1.5625rem;
       line-height: 30px;   
       color: $cor-verde;
+      pointer-events: none;
    }
 
    input{
