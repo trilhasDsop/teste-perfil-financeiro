@@ -6,8 +6,8 @@ import { DataContext } from '../../Context/dataContext';
 const Wizard = ({positionTop, snackBar, setSnackBar}) => {
    const containerLink = React.useRef(null);
    const navigate = useNavigate()
-   const { respostas } = React.useContext(DataContext);
-   
+   const { respostas, resultado } = React.useContext(DataContext);
+
    React.useEffect(() => {
       const arrayContainer = Array.from(containerLink.current.children)
 
@@ -28,7 +28,7 @@ const Wizard = ({positionTop, snackBar, setSnackBar}) => {
 
    function handleShowSnackbar(t){
       t.preventDefault();
-      if(respostas.p1 && respostas.p2 && respostas.p3 && respostas.p4 && respostas.p5 && respostas.p6 && respostas.p7 && respostas.p8){
+      if(respostas.p1 && respostas.p2 && respostas.p3 && respostas.p4 && respostas.p5 && respostas.p6 && respostas.p7 && respostas.p8 && resultado){
          if(t.target.getAttribute('href') === '/resultado'){
             navigate('/resultado')
          }
