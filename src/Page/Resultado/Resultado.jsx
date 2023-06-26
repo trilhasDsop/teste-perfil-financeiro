@@ -65,7 +65,7 @@ export const Resultado = () => {
         </article>
       </section>
 
-      <Wizard positionTop={400} />
+      <Wizard />
       
       <Footer />
     </>

@@ -49,7 +49,7 @@ export const Playlist = () => {
         </article>
       </section>
 
-      <Wizard positionTop={400} />
+      <Wizard />
       
       <Footer />
     </>

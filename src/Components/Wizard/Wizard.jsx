@@ -3,7 +3,7 @@ import stylewizard from '../../styles/components/wizard.module.scss';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { DataContext } from '../../Context/dataContext';
 
-const Wizard = ({positionTop, snackBar, setSnackBar}) => {
+const Wizard = ({setSnackBar}) => {
    const containerLink = React.useRef(null);
    const navigate = useNavigate()
    const { respostas, resultado } = React.useContext(DataContext);
@@ -43,7 +43,7 @@ const Wizard = ({positionTop, snackBar, setSnackBar}) => {
    }
 
    return (
-      <div className={stylewizard.wizard} style={{top: `${positionTop}px`}}>
+      <div className={stylewizard.wizard}>
          <div className={stylewizard.wizard__container} ref={containerLink}>
             <NavLink to="/" className={stylewizard.wizard__wizarditem}>
                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

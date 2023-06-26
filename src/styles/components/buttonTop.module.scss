@@ -8,7 +8,7 @@
    justify-content: center;
    align-items: center;
    position: fixed;
-   right: 120px;
+   right: 40px;
    bottom: 50px;
    z-index: 200;
    background-color: $cor-verde;
@@ -17,11 +17,10 @@
    transition: .2s;
    cursor: pointer;
    @include laptop{
-      right: 24px;
       right: 8px;
       bottom: 40px;
    }
-   @include tablet{
+   @include tablet{ 
       right: 24px;
    }
    svg{
