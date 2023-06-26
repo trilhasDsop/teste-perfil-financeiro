@@ -47,7 +47,7 @@ export const Home = () => {
         <div className={styleHome.main__homeContainer}>
           <div className={styleHome.main__home__divTexto}>
             <h1>Teste de Perfil Financeiro</h1>
-            <p>Vivamus tristique lorem ac dolor luctus faucibus. Curabitur magna orci, sodales ut lacus sed, pretium convallis augue. Nullam tincidunt a augue non rutrum. </p>
+            <p>Faça um diagnóstico do seu perfil financeiro e descubra com qual playlist você deve começar.</p>
           </div>
 
           <div className={styleHome.main__home__divImg}>
