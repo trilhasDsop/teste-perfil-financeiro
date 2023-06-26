@@ -1,6 +1,6 @@
 import React from 'react';
 import styleHeader from '../../styles/layout/header.module.scss';
-import fotoLogo from '../../assets/img/Logo-DFLIX.svg';
+import fotoLogo from '../../assets/img/Logo-DFLIX.png';
 
 export const Header = React.memo(function Header(){
    return (

@@ -20,6 +20,10 @@ export const Home = () => {
   const [snackbar, setSnackBar] = React.useState(false);
   const [pontos, setPontos] = React.useState({});
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   function handleChange(questao, alternativa, id){
     setRespostas({...respostas, [id]: [id, questao, alternativa]})
     setPontos({...pontos, [id]: alternativa.pontos})
