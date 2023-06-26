@@ -7,7 +7,7 @@ export const Header = React.memo(function Header(){
       <header className={styleHeader.header__menu}>
          <nav className={styleHeader.header__menu__nav}>
             <a className={styleHeader.header__menu__logo} href='/'>
-               <img src={fotoLogo} alt='logo dflix' />
+               <img width={105} height={39} src={fotoLogo} alt='logo dflix' />
             </a>
 
             <ul className={styleHeader.header__menu__lista}>

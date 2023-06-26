@@ -51,7 +51,7 @@ export const Home = () => {
           </div>
 
           <div className={styleHome.main__home__divImg}>
-            <img src={ilustracao} alt="imagem ilustrativa de teste de perfil"/>
+            <img width={567} height={567} src={ilustracao} alt="imagem ilustrativa de teste de perfil"/>
           </div>
         </div>
       </main>
