@@ -6,6 +6,7 @@ import { Resultado } from './Page/Resultado/Resultado';
 import { Playlist } from './Page/Playlist/Playlist';
 import User from './Context/dataContext';
 import ButtonTop from './Components/Button/ButtonTop';
+import ProtectedRoute from './Components/Protected Route/ProtectedRoute';
 
 function App() {
   return (
@@ -14,8 +15,22 @@ function App() {
       <User>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='resultado' element={<Resultado />} />
-          <Route path='playlist' element={<Playlist />} />
+          <Route 
+            path='resultado' 
+            element={
+              <ProtectedRoute>
+                <Resultado />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path='playlist' 
+            element={
+              <ProtectedRoute>
+                <Playlist />
+              </ProtectedRoute>
+            } 
+          />
         </Routes>
       </User>
       <ButtonTop />
