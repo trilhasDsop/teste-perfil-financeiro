@@ -26,7 +26,7 @@ const ButtonToTop = () => {
    }
  
    return (
-      <a
+      <button
          className={style.container__buttontop}
          style={{display: `${visivel ? 'flex' : 'none'}`}}
          onClick={handleClick}
@@ -36,7 +36,7 @@ const ButtonToTop = () => {
 
             <path d="M5 12L12 5L19 12" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
          </svg>
-     </a>
+     </button>
    )
 }
  
