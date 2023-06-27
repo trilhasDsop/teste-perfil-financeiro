@@ -46,9 +46,9 @@ html{
 body{
    background-color: #141414;
    font-family: 'Gilroy-regular', sans-serif;
-   background-image: url(../../assets/img/Ellipse-left.svg), url(../../assets/img/Ellipse-right.svg), url(../../assets/img/Ellipse-bottom.svg);
-   background-repeat: no-repeat, no-repeat, no-repeat;
-   background-position: left top, right top, center bottom;
+   background-image: url(../../assets/img/Ellipse-left.svg), url(../../assets/img/Ellipse-right.svg);
+   background-repeat: no-repeat, no-repeat;
+   background-position: left top, right top;
 }
  
 ul li{
