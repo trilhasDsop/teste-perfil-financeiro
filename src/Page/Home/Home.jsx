@@ -83,8 +83,6 @@ export const Home = () => {
       <Wizard setSnackBar={setSnackBar} />
 
       {snackbar && (<Snackbar ativarSnackar={setSnackBar} />)}
-
-      <div className={styleHome.divelipse}></div>
     </>
   )
 }

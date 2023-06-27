@@ -76,10 +76,10 @@
 }
 
 .section1__home{
-   padding: 130px 48px 40px 48px;
+   padding: 130px 48px 160px 48px;
    position: relative;
    @include tablet{
-      padding: 60px 24px;
+      padding: 40px 24px 90px 24px;
    }
 }  
 
@@ -180,38 +180,5 @@
       color: $cor-preto-1;
       border: none;
       cursor: pointer;
-   }
-}
-
-.divelipse{
-   width: 100%;
-   height: 200px;
-   position: absolute;
-   overflow: hidden;
-
-   @include laptop{
-      height: 150px;
-   }
-   @include tablet{
-      display: none;
-   }
-   &::before{
-      content: '';
-      position: absolute;
-      width: 992px;
-      height: 300px;
-      left: 50%;
-      bottom: -400px;
-      transform: translateX(-50%);
-      background-color: #12FF00;
-      opacity: 0.19;
-      filter: blur(125px);
-
-      @include laptop{
-         bottom: -450px;
-      }
-      @include tablet{
-         display: none;
-      }
    }
 }
