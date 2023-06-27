@@ -50,6 +50,10 @@
          span{
             font-size: 1.875rem;
             line-height: 36px;
+            @include tablet{
+               font-size: 2rem;
+               line-height: auto;
+            }
          }
 
          &::after{
