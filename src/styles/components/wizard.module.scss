@@ -217,11 +217,7 @@
          svg{
             filter: invert(72%) sepia(55%) saturate(4241%) hue-rotate(70deg) brightness(114%) contrast(135%);
          }
-         &::before{
-            background-color: $cor-verde;
-         }
-
-         &::after{
+         &::before, &::after{
             background-color: $cor-verde;
          }
       }
@@ -242,11 +238,7 @@
          svg{
             filter: invert(72%) sepia(55%) saturate(4241%) hue-rotate(70deg) brightness(114%) contrast(135%);
          }
-         &::before{
-            background-color: $cor-verde;
-         }
-
-         &::after{
+         &::before, &::after{
             background-color: $cor-verde;
          }
       }

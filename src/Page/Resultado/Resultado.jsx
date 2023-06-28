@@ -19,7 +19,7 @@ export const Resultado = () => {
   const playList = filterPlaylist(resultadoPerfil);
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(170, 0);
   }, []);
 
   return (

@@ -21,7 +21,7 @@ export const Home = () => {
   const [pontos, setPontos] = React.useState({});
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(170, 0);
   }, []);
 
   function handleChange(questao, alternativa, id){
