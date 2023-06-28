@@ -1,14 +1,13 @@
 import React from 'react';
-import styleHome from '../../styles/page/home.module.scss';
 import styleResultado from '../../styles/page/resultado.module.scss';
 
-import { Titulo } from '../../Components/Titulo/Titulo';
+import Titulo from '../../Components/Titulo/Titulo';
 import { DataContext } from '../../Context/dataContext';
 import { useNavigate } from 'react-router-dom';
-import { Footer } from '../../Layout/Footer/Footer';
+import Footer from '../../Layout/Footer/Footer';
 import Wizard from '../../Components/Wizard/Wizard';
 
-export const Resultado = () => {
+const Resultado = () => {
   const navigator = useNavigate();
   const {
     respostas, 
@@ -71,3 +70,5 @@ export const Resultado = () => {
     </>
   )
 }
+
+export default Resultado

@@ -1,7 +1,7 @@
 import React from 'react';
 import styleFooter from '../../styles/components/footer.module.scss';
 
-export const Footer = React.memo(function Footer(){
+const Footer = React.memo(function Footer(){
    return (
       <section className={styleFooter.sectionFooter}>
         <div className={styleFooter.sectionFooter__container}>
@@ -13,3 +13,5 @@ export const Footer = React.memo(function Footer(){
       </section>
    )
 })
+
+export default Footer

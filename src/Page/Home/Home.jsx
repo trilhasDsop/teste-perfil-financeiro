@@ -1,15 +1,15 @@
 import React from 'react';
 import ilustracao from '../../assets/img/Ilustracao2.svg';
 import styleHome from '../../styles/page/home.module.scss';
-import { Radio } from '../../Components/Radio/Radio';
-import { Titulo } from '../../Components/Titulo/Titulo';
+import Radio from '../../Components/Radio/Radio';
+import Titulo from '../../Components/Titulo/Titulo';
 
 import { useNavigate } from 'react-router-dom';
 import { DataContext } from '../../Context/dataContext';
 import Snackbar from '../../Components/Snackbar/Snackbar';
 import Wizard from '../../Components/Wizard/Wizard';
  
-export const Home = () => {
+const Home = () => {
   const navigate = useNavigate();
   const { 
     questoes,
@@ -86,3 +86,5 @@ export const Home = () => {
     </>
   )
 }
+
+export default Home

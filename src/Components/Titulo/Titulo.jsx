@@ -1,7 +1,7 @@
 import React from 'react';
 import tituloSection from '../../styles/components/titulo.module.scss'
 
-export const Titulo = React.memo(function Titulo({children}){
+const Titulo = React.memo(function Titulo({children}){
    return (
     <h1 className={tituloSection.titulosection}>{children}
       <svg width="18" height="5" viewBox="0 0 18 5" fill="none" xmlns="http: www.w3.org/2000/svg">
@@ -10,3 +10,5 @@ export const Titulo = React.memo(function Titulo({children}){
     </h1>
    )
 })
+
+export default Titulo

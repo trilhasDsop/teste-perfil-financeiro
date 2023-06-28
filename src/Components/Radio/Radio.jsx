@@ -1,7 +1,7 @@
 import React from 'react';
 import styleHome from '../../styles/page/home.module.scss';
 
-export const Radio = ({id, questao, alternativas, onchange, valor}) => {
+const Radio = ({id, questao, alternativas, onchange, valor}) => {
   const container = React.useRef(null);
 
   function clickItem(target){
@@ -51,3 +51,5 @@ export const Radio = ({id, questao, alternativas, onchange, valor}) => {
     </article>
   )
 }
+
+export default Radio;

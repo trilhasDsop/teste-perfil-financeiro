@@ -1,11 +1,11 @@
 import React from 'react';
 import stylePlaylist from '../../styles/page/playlist.module.scss';
-import { Titulo } from '../../Components/Titulo/Titulo';
+import Titulo from '../../Components/Titulo/Titulo';
 import { DataContext } from '../../Context/dataContext';
-import { Footer } from '../../Layout/Footer/Footer';
+import Footer from '../../Layout/Footer/Footer';
 import Wizard from '../../Components/Wizard/Wizard';
 
-export const Playlist = () => {
+const Playlist = () => {
   const { resultadoPerfil, filterPlaylist} = React.useContext(DataContext);
   const playList = filterPlaylist(resultadoPerfil);
 
@@ -55,3 +55,5 @@ export const Playlist = () => {
     </>
   )
 }
+
+export default Playlist
