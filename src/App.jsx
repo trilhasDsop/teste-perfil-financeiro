@@ -14,7 +14,6 @@ function App() {
       <Header />
       <User>
         <Routes>
-          <Route element={<Home />} />
           <Route path='/' element={<Home />} />
           <Route 
             path='resultado' 
