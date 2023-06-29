@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter,Routes, Route } from 'react-router-dom';
 import Header from './Layout/Header/Header';
 import Home from './Page/Home/Home';
 import Resultado from './Page/Resultado/Resultado';
@@ -10,12 +10,13 @@ import ProtectedRoute from './Components/Protected Route/ProtectedRoute';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header />
       <User>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route exact path='/' element={<Home />} />
           <Route 
+            exact
             path='resultado' 
             element={
               <ProtectedRoute>
@@ -24,6 +25,7 @@ function App() {
             } 
           />
           <Route 
+            exact
             path='playlist' 
             element={
               <ProtectedRoute>
@@ -34,7 +36,7 @@ function App() {
         </Routes>
       </User>
       <ButtonTop />
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 

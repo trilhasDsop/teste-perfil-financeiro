@@ -12,15 +12,15 @@ const Wizard = ({setSnackBar}) => {
       const arrayContainer = Array.from(containerLink.current.children)
 
       arrayContainer.forEach((c) => {
-         if(c.classList.contains('active') && c.getAttribute('href') === '/'){
+         if(c.classList.contains('active') && c.getAttribute('href') === '#/'){
             containerLink.current.classList.add('ativoContainer1');
          }
 
-         if(c.classList.contains('active') && c.getAttribute('href') === '/resultado'){
+         if(c.classList.contains('active') && c.getAttribute('href') === '#/resultado'){
             containerLink.current.classList.add('ativoContainer2');
          }
 
-         if(c.classList.contains('active') && c.getAttribute('href') === '/playlist'){
+         if(c.classList.contains('active') && c.getAttribute('href') === '#/playlist'){
             containerLink.current.classList.add('ativoContainer3');
          }
       })
@@ -29,11 +29,11 @@ const Wizard = ({setSnackBar}) => {
    function handleShowSnackbar(t){
       t.preventDefault();
       if(respostas.p1 && respostas.p2 && respostas.p3 && respostas.p4 && respostas.p5 && respostas.p6 && respostas.p7 && respostas.p8 && resultado){
-         if(t.target.getAttribute('href') === '/resultado'){
+         if(t.target.getAttribute('href') === '#/resultado'){
             navigate('/resultado')
          }
 
-         if(t.target.getAttribute('href') === '/playlist'){
+         if(t.target.getAttribute('href') === '#/playlist'){
             navigate('/playlist')
          }
       }
