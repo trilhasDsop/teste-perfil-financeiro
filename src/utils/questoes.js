@@ -25,7 +25,7 @@ const questoes = [
    },
    {
      'id': 'p2',
-     'questao': 'Você tem conseguido pagar suas despesas em dia e à vista?',
+     'questao': 'Você tem conseguido pagar seus gastos em dia e à vista?',
      'alternativas': [
        {
          'id': 'p2A',
