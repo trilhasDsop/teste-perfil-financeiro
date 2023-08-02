@@ -41,6 +41,8 @@ const User = ({children}) => {
     p6: '',
     p7: '',
     p8: '',
+    email: '',
+    termos: false
   });
   const [resultado, setResultado] = React.useState(null);
   const resultadoPerfil = perfil(resultado);

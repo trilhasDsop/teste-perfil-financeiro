@@ -8,19 +8,6 @@
    background-repeat: no-repeat;
    background-position: right bottom;
 
-   &::before{
-      content: '';
-      position: absolute;
-      width: 386px;
-      height: 386px;
-      left: -393px;
-      top: -319px;
-      z-index: -1;
-      background-color: $cor-verde;
-      opacity: 0.19;
-      filter: blur(125px);
-   }
-
    .sectionFooter__container{
       max-width: 1031px;
       margin: 0 auto;
