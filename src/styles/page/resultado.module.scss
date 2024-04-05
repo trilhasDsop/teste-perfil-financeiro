@@ -13,64 +13,66 @@
 }
 
 .sectionResultado__articlePerfil{
-   margin: 100px 0 140px 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+   margin: 100px 0;
 
    @include tablet{
       margin-top: 60px;
    }
    
-   h1{
-      position: relative;
-      font-family: 'Gilroy-bold', sans-serif;
-      font-size: 3.125rem;
-      line-height: 60px;
-      color: $cor-verde;
-      text-align: center;
+   .sectionResultado__articlePerfil__divflex{
+      display: flex;
+      align-items: center;
+      gap: 42px;
 
       @include tablet{
-         font-size: 2.5rem;
+         gap: 32px;
+         align-items: flex-start;
+         flex-direction: column;
       }
 
-      span{
-         font-size: 1.875rem;
-         line-height: 36px;
-         @include tablet{
-            font-size: 2rem;
-            line-height: auto;
-         }
-      }
-
-      &::after{
-         content: '';
-         width: 40%;
-         height: 2px;
-         position: absolute;
-         top: calc(100% + 18px);
-         left: 50%;
-         transform: translateX(-50%);
-         display: block;
-         background-color: $cor-cinza;
-
-         @include tablet{
-            width: 100%;
-            height: 2px;
-            top: calc(100% + 11px);
-            right: 0px;
-         }
-      }
-   }
- /*
-   .sectionResultado__articlePerfil__divflex{
-      
-
-     
       .sectionResultado__divflex{
          display: flex;
          flex-direction: column;
          gap: 10px;
+      }
+
+      h1{
+         position: relative;
+         font-family: 'Gilroy-bold', sans-serif;
+         font-size: 3.125rem;
+         line-height: 60px;
+         color: $cor-verde;
+
+         @include tablet{
+            font-size: 2.5rem;
+         }
+
+         span{
+            font-size: 1.875rem;
+            line-height: 36px;
+            @include tablet{
+               font-size: 2rem;
+               line-height: auto;
+            }
+         }
+
+         &::after{
+            content: '';
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: -21px;
+            display: block;
+            background-color: $cor-cinza;
+
+            @include tablet{
+               width: 100%;
+               height: 2px;
+               top: calc(100% + 11px);
+               right: 0px;
+            }
+         }
       }
 
       p{
@@ -83,8 +85,7 @@
             font-family: 'Gilroy-bold', sans-serif;
          }
       }
-      
-   }*/
+   }
 }
 
 .sectionResultado__article2Container{
@@ -158,7 +159,7 @@
          font-family: 'Gilroy-bold', sans-serif;
          font-size: 1.25rem;
          line-height: 24px;
-         color: $cor-verde;
+         color: #12FF00;
          background-color: transparent;
          border: none;
          cursor: pointer;
@@ -210,90 +211,5 @@
       line-height: 24px;
       text-align: center;
       color: $cor-branco-2;
-   }
-}
-
-.sectionResultado__article4Container{
-   margin: 85px 0;
-
-   h1{
-      font-family: 'Gilroy-semibold', sans-serif;
-      font-size: 1.875rem;
-      line-height: 36px;
-      color: $cor-branco-2;
-      text-align: center;
-
-      @include tablet{
-         font-size: 1.5625rem;
-         line-height: 32px;
-      }
-
-      a{
-         display: inline-block;
-         font-family: 'Gilroy-bold', sans-serif;
-         color: $cor-verde;
-      }
-   }
-}
-
-.sectionResultado__footer{
-   padding: 100px 0;
-   background-image: url(../../assets/img/Ellipse-left-resultado.svg), url(../../assets/img/Ellipse-right-resultado.svg);
-   background-repeat: no-repeat, no-repeat;
-   background-position: left bottom, right bottom;
-
-   @include small-laptop{
-      padding: 80px 0;
-   }
-
-   .sectionResultado__footercontainer{
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      @include small-laptop{
-         padding: 0 24px;
-         flex-direction: column;
-      }
-   }
-
-   .sectionResultado__divtexto{
-      h1{
-         margin-bottom: 8px;
-         color: $cor-verde;
-         font-family: 'Gilroy-bold', sans-serif;
-         font-size: 3.125rem;
-
-         @include tablet{
-            font-size: 2.5rem;
-            text-align: center;
-         }
-         @include mobile{
-            font-size: 2rem;
-            text-align: center;
-         }
-      }
-      p{
-         color: $cor-branco-1;
-         font-family: 'Gilroy-semibold', sans-serif;
-         font-size: 1.875rem;
-         line-height: normal;
-
-         @include tablet{
-            font-size: 1.675rem;
-            text-align: center;
-         }
-         @include mobile{
-            font-size: 1.5rem;
-            text-align: center;
-         }
-      }
-   }
-
-   .sectionResultado__divimg{
-      flex-shrink: 0;
    }
 }
