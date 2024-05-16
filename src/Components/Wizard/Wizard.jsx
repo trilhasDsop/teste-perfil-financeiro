@@ -19,10 +19,6 @@ const Wizard = ({setSnackBar}) => {
          if(c.classList.contains('active') && c.getAttribute('href') === '#/resultado'){
             containerLink.current.classList.add('ativoContainer2');
          }
-
-         if(c.classList.contains('active') && c.getAttribute('href') === '#/playlist'){
-            containerLink.current.classList.add('ativoContainer3');
-         }
       })
    })
 
@@ -31,10 +27,6 @@ const Wizard = ({setSnackBar}) => {
       if(respostas.p1 && respostas.p2 && respostas.p3 && respostas.p4 && respostas.p5 && respostas.p6 && respostas.p7 && respostas.p8 && resultado){
          if(t.target.getAttribute('href') === '#/resultado'){
             navigate('/resultado')
-         }
-
-         if(t.target.getAttribute('href') === '#/playlist'){
-            navigate('/playlist')
          }
       }
       else{
@@ -68,24 +60,7 @@ const Wizard = ({setSnackBar}) => {
                </svg>
                <div className={stylewizard.wizard__wizarditem__divtexto}>
                   <p>Resultados</p>
-                  <p>Complete o questionário para obter seus resultados.</p>
-               </div>
-            </NavLink>
-
-            <NavLink to="/playlist" className={stylewizard.wizard__wizarditem} aria-label='Sua playlist de séries' onClick={(target) => handleShowSnackbar(target)}>
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clipPath="url(#clip0_50_386)">
-                     <path d="M4 10H16V12H4V10ZM4 6H16V8H4V6ZM4 14H12V16H4V14ZM14 14V20L19 17L14 14Z" fill="#7D7D7D"/>
-                  </g>
-                  <defs>
-                     <clipPath id="clip0_50_386">
-                        <rect width="24" height="24" fill="white"/>
-                     </clipPath>
-                  </defs>
-               </svg>
-               <div className={stylewizard.wizard__wizarditem__divtexto}>
-                  <p>Playlist</p>
-                  <p>Sua playlist estará pronta ao final do teste.</p>
+                  <p>Complete o questionário para obter sua Playlist</p>
                </div>
             </NavLink>
          </div>
