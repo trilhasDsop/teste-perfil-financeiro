@@ -42,6 +42,10 @@
          padding: 10px 12px;
          display: block;
          color: $cor-branco-2;
+         transition: .3s;
+         &:hover{
+            color: $cor-verde-2;
+         }
       }
    }
 
@@ -49,7 +53,10 @@
       background-color: $cor-verde-2;
       border-radius: 44px;
       font-family: 'Gilroy-bold', sans-serif;
-   
+      transition: .3s;
+      &:hover{
+         background-color: #5DA037;
+      }
       a{
          padding: 10px 22px;
          display: block;

@@ -15,8 +15,11 @@
    text-align: center;
    border: none;
    border-radius: 50%;
-   transition: .2s;
+   transition: .3s;
    cursor: pointer;
+   &:hover{
+      background-color: #5DA037;
+   }
    @include laptop{
       right: 8px;
       bottom: 40px;

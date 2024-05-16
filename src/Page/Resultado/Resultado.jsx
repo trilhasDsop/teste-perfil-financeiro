@@ -3,12 +3,9 @@ import styleResultado from '../../styles/page/resultado.module.scss';
 
 import Titulo from '../../Components/Titulo/Titulo';
 import { DataContext } from '../../Context/dataContext';
-import { useNavigate } from 'react-router-dom';
-import Footer from '../../Layout/Footer/Footer';
 import Wizard from '../../Components/Wizard/Wizard';
 
 const Resultado = () => {
-  const navigator = useNavigate();
   const {
     respostas, 
     resultadoPerfil,
@@ -37,36 +34,50 @@ const Resultado = () => {
           <Titulo>A DFLIX recomenda a Playlist: {resultadoPerfil.perfil}</Titulo>
 
           <div className={styleResultado.sectionResultado__gridlista}>
-            {playList[0].filter((p, i) => i < 3).map((list) => (
-              <a key={list.id} href={list.link_url} target='_blank' className={styleResultado.sectionResultado__gridlista__container} title={list.nome}>
-                <img src={list.url_foto} alt={list.nome} />
+            {playList[0]?.map((list) => (
+              <a 
+                key={list.id} href={list.link_url} target='_blank' title={list.nome}
+                className={styleResultado.sectionResultado__gridlista__container} 
+              >
+                <img src={list.url_foto} alt={list.nome} width={400} height={512} />
                 <p>{list.nome}</p>
               </a>
             ))}
           </div>
-
-          <div className={styleResultado.sectionResultado__divplaylist}>
-            <button onClick={() => navigator('/playlist')}>Ver mais</button>
-          </div>
         </article>     
 
         <article className={styleResultado.sectionResultado__article2Container}>
-          <Titulo>Seus resultados</Titulo>
-          
-          {questoes?.map((questao, i) => (
-            <article key={i} className={styleResultado.sectionResultado__article2resultado}>
-              <h2>{questao[1]}</h2>
-                <p className={styleResultado.sectionResultado__article2resultado__questao}>
-                  <span>{questao[2]?.letra}</span> {questao[2]?.texto}
-                </p>
+          <Titulo>Nossos Planos</Titulo>
+
+          <div className={styleResultado.sectionResultado__divPlanos}>
+            <article className={styleResultado.sectionResultado__divPlanos__item}>
+              <h2>Plano Semestral</h2>
+              <p>R$<strong>53,40</strong></p>
+              <p>R$<strong>8,90</strong>/MÊS*</p>
+              <p>Pagamento realizado de uma só vez<br/> Sua assinatura será renovada automaticamente.</p>
+              <a href="https://streaming.dflix.com.br/?modal=subscribe">Obter Plano</a>
             </article>
-          ))}
+
+            <article className={styleResultado.sectionResultado__divPlanos__item}>
+              <h2>Plano triMEStral</h2>
+              <p>R$<strong>29,70</strong></p>
+              <p>R$<strong>9,90</strong>/MÊS*</p>
+              <p>Pagamento realizado de uma só vez<br/> Sua assinatura será renovada automaticamente.</p>
+              <a href="https://streaming.dflix.com.br/?modal=subscribe">Obter Plano</a>
+            </article>
+
+            <article className={styleResultado.sectionResultado__divPlanos__item}>
+              <h2>Plano Anual</h2>
+              <p>R$<strong>94,80</strong></p>
+              <p>R$<strong>7,90</strong>/MÊS*</p>
+              <p>Pagamento realizado de uma só vez<br/> Sua assinatura será renovada automaticamente.</p>
+              <a href="https://streaming.dflix.com.br/?modal=subscribe">Obter Plano</a>
+            </article>
+          </div>
         </article>
       </section>
 
       <Wizard />
-      
-      <Footer />
     </>
   )
 }
