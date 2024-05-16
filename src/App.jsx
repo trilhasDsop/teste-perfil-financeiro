@@ -3,7 +3,6 @@ import { HashRouter,Routes, Route } from 'react-router-dom';
 import Header from './Layout/Header/Header';
 import Home from './Page/Home/Home';
 import Resultado from './Page/Resultado/Resultado';
-import Playlist from './Page/Playlist/Playlist';
 import User from './Context/dataContext';
 import ButtonTop from './Components/Button/ButtonTop';
 import ProtectedRoute from './Components/Protected Route/ProtectedRoute';
@@ -21,15 +20,6 @@ function App() {
             element={
               <ProtectedRoute>
                 <Resultado />
-              </ProtectedRoute>
-            } 
-          />
-          <Route 
-            exact
-            path='playlist' 
-            element={
-              <ProtectedRoute>
-                <Playlist />
               </ProtectedRoute>
             } 
           />

@@ -173,6 +173,10 @@
       border: none;
       background-color: transparent;
       cursor: pointer;
+      transition: .3s;
+      &:hover{
+         color: $cor-verde-2;
+      }
    }
 
    button{
@@ -184,5 +188,9 @@
       color: $cor-branco-1;
       border: none;
       cursor: pointer;
+      transition: .3s;
+      &:hover{
+         background-color: #5DA037;
+      }
    }
 }
