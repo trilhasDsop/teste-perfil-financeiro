@@ -2,6 +2,12 @@ import React from 'react';
 import style from '../../styles/components/snackbar.module.scss';
 
 const Snackbar = ({ativarSnackar}) => {
+   React.useEffect(() => {
+      setTimeout(() => {
+         ativarSnackar(false);
+      }, 4000);
+   }, []);
+
    return(
       <div className={style.snackbar}>
          <div className={style.snackbar__container}>
