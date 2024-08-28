@@ -49,6 +49,14 @@ body{
    background-image: url(../../assets/img/Ellipse-left.svg), url(../../assets/img/Ellipse-right.svg);
    background-repeat: no-repeat, no-repeat;
    background-position: left top, right top;
+
+   &::-webkit-scrollbar {
+      width: 0.875rem;
+   }
+   &::-webkit-scrollbar-thumb{
+      background-color: #6FB846;
+      border-radius: 2px;
+   }
 }
 
 ul li{
