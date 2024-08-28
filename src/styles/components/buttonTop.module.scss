@@ -27,6 +27,9 @@
    @include tablet{ 
       right: 24px;
    }
+   @include mobile{
+      display: none !important;
+   }
    svg{
       pointer-events: none;
    }
