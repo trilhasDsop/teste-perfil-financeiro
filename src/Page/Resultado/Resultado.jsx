@@ -7,15 +7,13 @@ import Wizard from '../../Components/Wizard/Wizard';
 
 const Resultado = () => {
   const {
-    respostas, 
     resultadoPerfil,
     filterPlaylist
   } = React.useContext(DataContext);
-  const questoes = Object.values(respostas);
   const playList = filterPlaylist(resultadoPerfil);
-
+  
   React.useEffect(() => {
-    window.scrollTo(170, 0);
+    window.scrollTo(0, 230);
   }, []);
 
   return (
@@ -39,7 +37,7 @@ const Resultado = () => {
                 key={list.id} href={list.link_url} target='_blank' title={list.nome}
                 className={styleResultado.sectionResultado__gridlista__container} 
               >
-                <img src={list.url_foto} alt={list.nome} width={400} height={512} />
+                <img src={list.url_foto} alt={list.nome} width={400} height={512} loading='lazy' />
                 <p>{list.nome}</p>
               </a>
             ))}

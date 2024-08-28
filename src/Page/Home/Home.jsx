@@ -20,10 +20,6 @@ const Home = () => {
   const [snackbar, setSnackBar] = React.useState(false);
   const [pontos, setPontos] = React.useState({});
 
-  React.useEffect(() => {
-    window.scrollTo(170, 0);
-  }, []);
-
   function handleChange(questao, alternativa, id){
     setRespostas({...respostas, [id]: [id, questao, alternativa]})
     setPontos({...pontos, [id]: alternativa.pontos})
@@ -37,7 +33,7 @@ const Home = () => {
       setResultado(pontuacao);
 
       if(pontuacao){
-        navigate('/resultado')
+        navigate('/resultado');
       }
     }
     else{
@@ -75,7 +71,7 @@ const Home = () => {
 
           <div className={styleHome.section1__home__divbutton}>
             <a href="/">Resetar</a>
-            <button onClick={handleClick}>Enviar</button>
+            <button onClick={handleClick} type='button'>Enviar</button>
           </div>
         </form>
       </section>
