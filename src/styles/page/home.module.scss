@@ -114,7 +114,8 @@
    }
 }
 
-.section1__home__articleQuestoes{
+.section1__home__articleQuestoes, 
+.section1__home__articleQuestoesChecked{
    padding: 19px 32px 19px 11px;
    margin-top: 20px;
    display: flex;
@@ -154,6 +155,20 @@
       appearance: 'none'; 
       margin: 0; 
       pointer-events: none;
+   }
+}
+
+.section1__home__articleQuestoesChecked{
+   background-color: $cor-verde;
+   color: $cor-preto-2;
+   font-family: "Gilroy-bold", sans-serif;
+
+   &:hover{
+      color: $cor-preto-2 !important;
+   }
+   span{
+      color: $cor-preto-2;
+      font-family: 'Gilroy-bold', sans-serif;
    }
 }
 

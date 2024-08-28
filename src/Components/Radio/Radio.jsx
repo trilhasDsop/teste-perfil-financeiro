@@ -1,54 +1,36 @@
 import React from 'react';
 import styleHome from '../../styles/page/home.module.scss';
 
-const Radio = ({id, questao, alternativas, onchange, valor}) => {
-  const container = React.useRef(null);
+const Radio = ({id, questao, alternativas, onchange}) => {
+  const [radio, setRadio] = React.useState('');
 
-  function clickItem(target){
-    const articleArray = Array.from(container.current.children)
-    
-    articleArray.forEach((element) => {
-      if(element.classList.contains(`ativo${target.tagName}`)){
-        element.style.cssText = `
-          color: #fff;
-          background-color: transparent;
-          font-family: Gilroy-medium, sans-serif;
-          pointer-events: auto;
-        `;
-        element.children[1].style.color =  '#12FF00';
-        element.classList.remove(`ativo${target.tagName}`)
-      }
-      element.classList.remove(`ativo${target.tagName}`) 
-    })
-  
-    target.parentElement.classList.add(`ativo${target.tagName}`); 
-    target.style.cssText = `
-      color: #131313!important;
-      background-color: #12FF00;
-      appearance: none;
-      font-family: Gilroy-bold, sans-serif;
-      pointer-events: none;
-    `;
-    target.children[1]?.tagName === 'SPAN' ? target.children[1].style.color = '#131313' : null;
+  function handleRadioChange(target, alternativa){
+    setRadio(target.value);
+    onchange(questao, alternativa, id);
   }
 
   return(
-    <article ref={container} className={styleHome.section1__home__article}> 
-      <h2>{questao}</h2>
-      {alternativas?.map((alternativa) => (
-        <label key={alternativa.texto} className={styleHome.section1__home__articleQuestoes} onClick={({target}) => clickItem(target)}>
-          <input 
-            type='radio'
-            id={alternativa.id}
-            checked={valor === alternativa.texto}
-            value={alternativa.texto}
-            onChange={() => onchange(questao, alternativa, id)}
-            style={{appearance: 'none', margin: 0, pointerEvents: 'none'}}
-          />
-          <span>{alternativa.letra}</span>{alternativa.texto}
-        </label>
-      ))}
-    </article>
+  <article className={styleHome.section1__home__article}> 
+    <h2>{questao}</h2>
+    {alternativas?.map((alternativa) => (
+      <label key={alternativa.texto} htmlFor={alternativa.id}
+      className={
+        radio === alternativa.id 
+        ? styleHome.section1__home__articleQuestoesChecked
+        : styleHome.section1__home__articleQuestoes
+      }>
+        <input 
+          type='radio'
+          id={alternativa.id}
+          checked={radio === alternativa.id}
+          value={alternativa.id}
+          onChange={({target}) => handleRadioChange(target, alternativa)}
+          style={{appearance: 'none', margin: 0, pointerEvents: 'none'}}
+        />
+        <span>{alternativa.letra}</span>{alternativa.texto}
+      </label>
+    ))}
+  </article>
   )
 }
 
